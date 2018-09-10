@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<codeBook version="1.0">
+    <docDscr/>
+    <stdyDscr>
+        <citation>
+            <titlStmt>
+                <titl>ssb_v7_0_synthetic_new_vars.dta</titl>
+            </titlStmt>
+        </citation>
+    </stdyDscr>
+    <dataDscr>
+        <var ID="v7V1" name="date_enter_sipp">
+            <labl>Wave Entered SIPP</labl>
+        </var>
+        <var ID="v7V2" name="mdy_lft_sipp">
+            <labl>Wave Left SIPP</labl>
+        </var>
+        <var ID="v7V3" name="panel_1styear">
+            <labl/>
+        </var>
+        <var ID="v7V4" name="flag_in_tmhist_ms">
+            <labl>Flag: In Marital History TM</labl>
+        </var>
+        <var ID="v7V5" name="first_birth_year">
+            <labl>Year of Birth of First Child</labl>
+        </var>
+        <var ID="v7V6" name="last_birth_year">
+            <labl>Year of Birth of Last Child</labl>
+        </var>
+        <var ID="v7V7" name="halfsamp">
+            <labl>Half Sample Code</labl>
+        </var>
+        <var ID="v7V8" name="varstrat">
+            <labl>Variance Stratum Code</labl>
+        </var>
+        <var ID="v7V9" name="mom_personid">
+            <labl>SIPP Gold Standard Person ID of Mom</labl>
+        </var>
+        <var ID="v7V10" name="ser_posearn_1951">
+            <labl>SER: Positive Earnings</labl>
+        </var>
+        <var ID="v7V11" name="mbr_ssdi_ben_dof">
+            <labl>MBR: date of filing for SSDI (benefit eventually received)</labl>
+        </var>
+        <var ID="v7V12" name="mbr_ssdi_deny_dof">
+            <labl>MBR: date of filing for SSDI (claim denied)</labl>
+        </var>
+        <var ID="v7V13" name="mbr_ssdi_bdof_app">
+            <labl>Application associated with date of filing</labl>
+        </var>
+        <var ID="v7V14" name="mbr_ssdi_ddof_app">
+            <labl>Application associated with date of filing (denied app)</labl>
+        </var>
+        <var ID="v7V15" name="flag_enter_late">
+            <labl/>
+        </var>
+        <var ID="v7V16" name="flag_lft_sipp">
+            <labl/>
+        </var>
+        <var ID="v7V17" name="life_ins_in_scope">
+            <labl/>
+        </var>
+        <var ID="v7V18" name="pension_in_scope_age">
+            <labl/>
+        </var>
+        <var ID="v7V19" name="fert_in_scope">
+            <labl/>
+        </var>
+        <var ID="v7V20" name="brthmn_sipp">
+            <labl/>
+        </var>
+        <var ID="v7V21" name="brthyr_sipp">
+            <labl/>
+        </var>
+    </dataDscr>
+</codeBook>
