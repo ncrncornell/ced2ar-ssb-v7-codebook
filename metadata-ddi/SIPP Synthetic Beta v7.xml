@@ -269,7 +269,7 @@
       <labl>Demographic Variables</labl>
       <txt>The variables in this section are all drawn from the SIPP and represent demographic information gathered by the survey at a specific point in time.  Entries for individual variables describe the exact SIPP source variable and the reference point in time.</txt>
     </varGrp>
-    <varGrp ID="_economic_variables" name="Economic Variables" var="DScsDMyoR2rG1QjC lRsTMYUBjFOXa3qB a29oUbIrkIXwM8A8 WBTgghT1bYivuT0f TLtG87Z7dvHLl2QY ApBLZ1hjEY8UhOBo EaKFscwxtuBoQbB3 QuZqLMwYtaRjtzIe yLAvMxUAm36uzZlT iKPQQSwHgD80tgDW OGqQl8oIeixl47WW" xml-lang="xml-lang339">
+    <varGrp ID="_economic_variables" name="Economic Variables" var="DScsDMyoR2rG1QjC lRsTMYUBjFOXa3qB a29oUbIrkIXwM8A8 WBTgghT1bYivuT0f  ApBLZ1hjEY8UhOBo EaKFscwxtuBoQbB3  yLAvMxUAm36uzZlT iKPQQSwHgD80tgDW OGqQl8oIeixl47WW" xml-lang="xml-lang339">
       <labl>Economic Variables</labl>
       <txt>The variables in this section are all drawn from the SIPP and represent economic information gathered by the survey at a specific point in time.  Entries for individual variables describe the exact SIPP source variable and the reference point in time.</txt>
     </varGrp>
