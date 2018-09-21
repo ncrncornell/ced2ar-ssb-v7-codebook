@@ -77,7 +77,7 @@
       </subject>
       <abstract>
         <p>The SIPP Synthetic Beta (SSB) is a Census Bureau product that integrates person-level micro-data from a household survey with administrative tax and benefit data. These data link respondents from the Survey of Income and Program Participation (SIPP) to Social Security Administration (SSA)/Internal Revenue Service (IRS) Form W-2 records and SSA records of retirement and disability benefit receipt, and were produced by Census Bureau staff economists and statisticians in collaboration with researchers at Cornell University, the SSA and the IRS. The purpose of the SSB is to provide access to linked data that are usually not publicly available due to confidentiality concerns. To overcome these concerns, Census has synthesized, or modeled, all the variables in a way that changes the record of each individual in a manner designed to preserve the underlying covariate relationships between the variables. The only variables that were not altered by the synthesis process and still contain their original values are gender and a link to the first reported marital partner in the survey. Eight SIPP panels (1990, 1991, 1992, 1993, 1996, 2001, 2004, 2008) form the basis for the SSB, with a large subset of variables available across all the panels selected for inclusion and harmonization across the years. Administrative data were added and some editing was done to correct for logical inconsistencies in the IRS/SSA earnings and benefits data.</p>
-        <p>Users should be aware that time-varying variable arrays are collapsed in this codebook to a placeholder variable. Thus,<emph>afdc_M</emph>stands in for the 48 variables<emph>afdc_1--afdc_48</emph>.</p>
+        <p>Users should be aware that time-varying variable arrays are collapsed in this codebook to a placeholder variable. Thus,<emph>afdc_Y_M</emph>stands in for the year and month variables<emph>afdc_1990_1--afdc_2008_12</emph>.</p>
       </abstract>
       <sumDscr>
         <timePrd>1951-2007</timePrd>
@@ -428,7 +428,7 @@
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V300" access="released" name="afdc_M">
+    <var ID="V300" access="released" name="afdc_Y_M">
       <labl access="released">Indicator for receipt of AFDC or TANF benefits</labl>
       <txt>
         <p>This variable indicates that a respondent received public assistance payments (AFDC or TANF) in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I20REC1, I20REC2, I20REC3, I20REC4 in 1984; R20 in the 1990, 1991, 1992, and 1993 panels; ER20 in the 1996, 2001, 2004, and 2008 panels.</p>
@@ -442,7 +442,7 @@
         <labl>Received public assistance payment</labl>
       </catgry>
     </var>
-    <var ID="V301" access="released" name="afdcamt_M">
+    <var ID="V301" access="released" name="afdcamt_Y_M">
       <labl access="released">Amount of AFDC received</labl>
       <txt>
         <p>This variable is the amount of public assistance payments (AFDC or TANF) that a respondent received month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I20AMT1-I20AMT4 in 1984; S20AMT in the 1990, 1991, 1992, and 1993 panels; T20AMT in the 1996, 2001, 2004, and 2008 panels.</p>
@@ -755,7 +755,7 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V302" access="released" name="foodstp_M">
+    <var ID="V302" access="released" name="foodstp_Y_M">
       <labl access="released">Indicator for receipt of SNAP/Food Stamps</labl>
       <txt>
         <p>This variable indicates that a respondent received food stamps/SNAP benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. This variable comes from the core file. The relevant SIPP variables are I27REC1, I27REC2, I27REC3, I27REC4 in the 1984 panel; R27 in the 1990, 1991, 1992, and 1993 panels; and ER27 in the 1996, 2001, 2004, and 2008 panels.</p>
@@ -789,14 +789,14 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V303" access="released" name="fsamt_M">
+    <var ID="V303" access="released" name="fsamt_Y_M">
       <labl access="released">SNAP/Food Stamps Amount Received</labl>
       <txt>
         <p>This variable is the amount of food stamps/SNAP benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The relevant SIPP variables are I27AMT1, I27AMT2, I27AMT3, I27AMT4 in the 1984 panel; S27AMT in the 1990, 1991, 1992, and 1993 panels; T27AMT in the 1996, 2001, 2004, and 2008 panels.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V293" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="hicov_M" xml-lang="xml-lang339">
+    <var ID="V293" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="hicov_Y_M" xml-lang="xml-lang339">
       <location width="67"/>
       <labl access="released">Health Insurance Coverage</labl>
       <valrng access="released">
@@ -819,7 +819,7 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat schema="other" type="numeric"/>
     </var>
-    <var ID="V294" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="hiemp_M" xml-lang="xml-lang339">
+    <var ID="V294" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="hiemp_Y_M" xml-lang="xml-lang339">
       <location width="58"/>
       <labl access="released">Health Insurance Coverage from Employer</labl>
       <valrng access="released">
@@ -869,7 +869,7 @@ The marital history topical module asks about a person's first and second marria
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="WBTgghT1bYivuT0f" access="released" dcml="0" files="F1 F2" name="ind_4cat">
+    <var ID="WBTgghT1bYivuT0f" access="released" dcml="0" files="F1 F2" name="ind_cat_W">
       <location EndPos="80" StartPos="80" width="1"/>
       <labl access="released" xml-lang="en">Industry Category for Primary Job in Wave W</labl>
       <valrng access="released">
@@ -962,23 +962,6 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="TLtG87Z7dvHLl2QY" access="released" dcml="0" files="F1 F2" name="ind_exist">
-      <location EndPos="10" StartPos="10" width="1"/>
-      <labl access="released" xml-lang="en">Flag: Industry Assigned</labl>
-      <valrng access="released">
-        <range UNITS="REAL" access="released" max="1" min="0"/>
-      </valrng>
-      <txt>This variable indicates whether an individual has a valid industry from a job held during the survey and governs the ind_4cat variable.  If ind_exist=1, the ind_4cat will have a value between 1 and 4.</txt>
-      <catgry access="released">
-        <catValu>0</catValu>
-        <labl>No, last worked 1984 or earlier, or no valid industry reported</labl>
-      </catgry>
-      <catgry access="released">
-        <catValu>1</catValu>
-        <labl>Yes</labl>
-      </catgry>
-      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
-    </var>
     <var ID="IYUJQ8HcGqZcCwC2" access="released" dcml="13" files="F1 F2" name="initwgt">
       <location EndPos="133" StartPos="116" width="18"/>
       <labl access="released">Initial SIPP Weight</labl>
@@ -991,7 +974,7 @@ The marital history topical module asks about a person's first and second marria
       <txt>This variable contains the administrative birthdate for the last biological child. The universe for this variable is all women between the ages of 15 and 65 at the time of the fertility history topical module. This variable was created by first looking for biological children on the SIPP household roster and choosing the birthdate of the youngest child (if no children were found, the value was set to missing). The total number of biological children reported on the roster (could possibly be zero) was then compared to the woman's report in her fertility history about the number of children born to her. If the number born to her was larger, last_admin_birthdate was set to missing and imputed using the woman's report of the last year she gave birth as a predictor variable. This process allowed us to create a fertility history that was consistent with the children reported on the roster and their administrative birthdates but still handle cases where older children or all children lived outside the household.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="lJFN1PltOyO9elMn" access="released" dcml="0" files="F1 F2" name="layoff_M">
+    <var ID="lJFN1PltOyO9elMn" access="released" dcml="0" files="F1 F2" name="layoff_Y_M">
       <location EndPos="500" StartPos="489" width="12"/>
       <labl access="released" xml-lang="en">On Layoff (Without Pay)</labl>
       <txt>
@@ -1007,21 +990,7 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="Bm3nzfjg2K6sOuYA" access="released" dcml="0" files="F1 F2" name="left_layoff_M">
-      <location EndPos="512" StartPos="501" width="12"/>
-      <labl access="released" xml-lang="en">Left a Job Because of Layoff</labl>
-      <txt>The variable indicates that the individual left a job due to a layoff in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. Note that these questions were not asked in the 1984 panel.</txt>
-      <catgry access="released">
-        <catValu>0</catValu>
-        <labl>No</labl>
-      </catgry>
-      <catgry access="released">
-        <catValu>1</catValu>
-        <labl>Yes</labl>
-      </catgry>
-      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
-    </var>
-    <var ID="AJ6nsE4MHObSbqy4" access="released" dcml="0" files="F1 F2" name="life_ins_1">
+   <var ID="AJ6nsE4MHObSbqy4" access="released" dcml="0" files="F1 F2" name="life_ins_1">
       <location EndPos="16" StartPos="16" width="1"/>
       <labl access="released" xml-lang="en">Life Insurance Ownership</labl>
       <txt>This variable indicates that the individual owns a life insurance plan at the time of the assets topical module.  This module was asked in the following waves, by panel: Wave 4 in the 1984 &amp; 1990-1993 panels (TM8308);  Wave 3 in the 1996 panel (EALLI); wave 3 in the 2001 (EALLIE); wave 3 in 2004 (EALLIE); and wave 4 in 2008 (EALLIE).</txt>
@@ -1536,7 +1505,7 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="EaKFscwxtuBoQbB3" access="released" dcml="0" files="F1 F2" name="occ_3cat">
+    <var ID="EaKFscwxtuBoQbB3" access="released" dcml="0" files="F1 F2" name="occ_cat_W">
       <location EndPos="81" StartPos="81" width="1"/>
       <labl access="released" xml-lang="en">Occupation Category for Primary Job in Wave W</labl>
       <valrng access="restricted">
@@ -1638,23 +1607,6 @@ The marital history topical module asks about a person's first and second marria
       <catgry>
         <catValu>24</catValu>
         <labl>Military</labl>
-      </catgry>
-      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
-    </var>
-    <var ID="QuZqLMwYtaRjtzIe" access="released" dcml="0" files="F1 F2" name="occ_exist">
-      <location EndPos="11" StartPos="11" width="1"/>
-      <labl access="released" xml-lang="en">SIPP Occupation - existence</labl>
-      <valrng access="released">
-        <range UNITS="REAL" access="released" max="1" min="0"/>
-      </valrng>
-      <txt>This variable indicates whether a person has a valid occupation from a job held during the survey.</txt>
-      <catgry access="released">
-        <catValu>0</catValu>
-        <labl>No, last worked 1984 or earlier, or no valid industry reported</labl>
-      </catgry>
-      <catgry access="released">
-        <catValu>1</catValu>
-        <labl>Yes</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -2399,7 +2351,7 @@ The marital history topical module asks about a person's first and second marria
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V299" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totearn_M">
+    <var ID="V299" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totearn_Y_M">
       <location width="9"/>
       <labl access="released">Total Earnings</labl>
       <txt>
@@ -2415,7 +2367,7 @@ The marital history topical module asks about a person's first and second marria
       </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
-    <var ID="V296" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="tothours_M" xml-lang="xml-lang339">
+    <var ID="V296" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totalhrs_Y_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Total Usual Weekly Hours Worked at All Jobs</labl>
       <txt>
@@ -2423,7 +2375,7 @@ The marital history topical module asks about a person's first and second marria
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V295" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totinc_M" xml-lang="xml-lang339">
+    <var ID="V295" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totinc_Y_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Total Personal Income</labl>
       <txt>
@@ -2437,14 +2389,14 @@ The marital history topical module asks about a person's first and second marria
       <txt>Total net worth as reported in the wealth topical module, collected in the following waves, by panel: Wave 4 in the 1984 (HHTNW) &amp; 1990-1993 (HH_TNW) panels; Wave 3 in 1996, 2001, &amp; 2004 (THHTNW) panels; Wave 4 in 2008 panel (THHTNW).</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V304" access="released" name="vcamt_M">
+    <var ID="V304" access="released" name="vcamt_Y_M">
       <labl access="released">Amount of veterans compensation or pension benefit</labl>
       <txt>
         <p>This variable is the amount of veterans compensation or pension benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I08AMT1-I08AMT4 in 1984; S08AMT in the 1990, 1991, 1992, and 1993 panels; T08AMT in the 1996, 2001, 2004, and 2008 panels.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V305" access="released" name="vetrecip_M">
+    <var ID="V305" access="released" name="vetrecip_Y_M">
       <labl access="released">Indicator for receipt of veterans compensation or pension benefits</labl>
       <txt>
         <p>This variable indicates that a respondent received veterans compensation or pension benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I08REC1-I08REC4 in 1984; R08 in the 1990, 1991, 1992, and 1993 panels; ER08 in the 1996, 2001, 2004, and 2008 panels.</p>
@@ -2458,14 +2410,14 @@ The marital history topical module asks about a person's first and second marria
         <labl>Received veterans compensation or veterans benefits</labl>
       </catgry>
     </var>
-    <var ID="V306" access="released" name="wcamt_M">
+    <var ID="V306" access="released" name="wcamt_Y_M">
       <labl access="released">Amount of Workers Compensation Received</labl>
       <txt>
         <p>This variable is the amount of workers compensation benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I10AMT1-I10AMT4 in 1984; S10AMT in the 1990, 1991, 1992, and 1993 panels; T10AMT in the 1996, 2001, 2004, and 2008 panels.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="V307" access="released" name="wkcomp_M">
+    <var ID="V307" access="released" name="wkcomp_Y_M">
       <labl access="released">Indicator for receipt of workers compensation</labl>
       <txt>
         <p>This variable indicates that a respondent received workers compensation benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I10REC1-I10REC4 in 1984; R10 in the 1990, 1991, 1992, and 1993 panels; ER10 in the 1996, 2001, 2004, and 2008 panels.</p>
@@ -2479,7 +2431,7 @@ The marital history topical module asks about a person's first and second marria
         <labl>Received workers compensation benefits</labl>
       </catgry>
     </var>
-    <var ID="V297" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="wksjob_M" xml-lang="xml-lang339">
+    <var ID="V297" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="wksjob_Y_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Weeks at a Job</labl>
       <txt>
@@ -2487,7 +2439,7 @@ The marital history topical module asks about a person's first and second marria
       </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
-    <var ID="V298" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="wkswp_M" xml-lang="xml-lang339">
+    <var ID="V298" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="wkswp_Y_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Weeks With Pay</labl>
       <txt>
@@ -2629,7 +2581,7 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       </txt>
       <concept>numeric</concept>
     </var>
-    <var ID="v7V10" access="released" name="ser_posearn_1951">
+    <var ID="v7V10" access="released" name="ser_posearn_YYYY">
       <labl>SER: Positive Earnings</labl>
       <txt>
         <p>A binary indicator for having positive earnings (based on the SER) in year YYYY.</p>
