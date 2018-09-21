@@ -27,7 +27,7 @@
         <distDate date="2018">2018</distDate>
       </distStmt>
       <verStmt>
-        <version date="2016-06-06 23:30:52 (upload date)">2018-09-01</version>
+        <version date="2018-09-20 12:37:23 (auto-generated)">2018-09-01</version>
       </verStmt>
       <biblCit>
         <p>Lori B. Reeder and Jordan C Stanley and Lars Vilhuber. Codebook for the SIPP Synthetic Beta 7.0 [Codebook file]. Cornell Institute for Social and Economic Research and Labor Dynamics Institute [distributor]. Cornell University, Ithaca, NY, 2015</p>
@@ -430,7 +430,9 @@
     </var>
     <var ID="V300" access="released" name="afdc_M">
       <labl access="released">Indicator for receipt of AFDC or TANF benefits</labl>
-      <txt>This variable indicates that a respondent received public assistance payments (AFDC or TANF) in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I20REC1-I20REC4 in 1984; R20 in the 1990, 1991, 1992, and 1993 panels; ER20 in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable indicates that a respondent received public assistance payments (AFDC or TANF) in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I20REC1, I20REC2, I20REC3, I20REC4 in 1984; R20 in the 1990, 1991, 1992, and 1993 panels; ER20 in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not receive public assistance payment</labl>
@@ -442,7 +444,9 @@
     </var>
     <var ID="V301" access="released" name="afdcamt_M">
       <labl access="released">Amount of AFDC received</labl>
-      <txt>This variable is the amount of public assistance payments (AFDC or TANF) that a respondent received month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I20AMT1-I20AMT4 in 1984; S20AMT in the 1990, 1991, 1992, and 1993 panels; T20AMT in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable is the amount of public assistance payments (AFDC or TANF) that a respondent received month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I20AMT1-I20AMT4 in 1984; S20AMT in the 1990, 1991, 1992, and 1993 panels; T20AMT in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="NXQrO4IWCYXUdFTi" access="released" dcml="12" files="F1 F2" name="birthdate">
@@ -473,7 +477,9 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
     <var ID="tspFfoKZwGahRGEx" access="released" dcml="0" files="F1 F2" name="current_enroll_hs">
       <location EndPos="8" StartPos="8" width="1"/>
       <labl access="released" xml-lang="en">Currently Enrolled in HS (or less)</labl>
-      <txt>Indicates whether an individual is attending high school.  This variable can be used to differentiate between people who do not have a high school degree (educ_5cat=1) but are still attending school and those who do not have a high school degree but are not currently attending high school.  Researchers should be careful to consider the age of the individual when using current_enroll_hs and educ_5cat.  Individuals who are still young children at the time of the SIPP will have educ_5cat=1 and current_enroll_hs=0 because they are still attending preschool or elementary school.  Older individuals with these values for the education variables can be classified as not having finished high school. Education variables come from the following waves, by panel: Wave 2 in the 1990-1993 panels (TM8400, TM8404, TM8406); Wave 2 in the 1996 panel (TLSTSCHL, THSYR); Wave 2 in the 1996-2008 panels (ELSTSCHL, EHSYR). Note: this information is not available in the 1984 panel.</txt>
+      <txt>
+        <p>Indicates whether an individual is attending high school. This variable can be used to differentiate between people who do not have a high school degree (educ_5cat=1) but are still attending school and those who do not have a high school degree and are not currently attending high school. Researchers should be careful to consider the age of the individual when using current_enroll_hs and educ_5cat. Individuals who are still young children at the time of the SIPP will have educ_5cat=1 and current_enroll_hs=0 because they are still attending preschool or elementary school. Older individuals with these values for the education variables can be classified as not having finished high school. Education variables come from the following waves, by panel: Wave 2 in the 1990-1993 panels (TM8400, TM8404, TM8406); Wave 2 in the 1996 panel (TLSTSCHL, THSYR); Wave 2 in the 1996-2008 panels (ELSTSCHL, EHSYR). Note: this information is not available in the 1984 panel.</p>
+      </txt>
       <catgry access="released">
         <catValu>1</catValu>
         <labl>Currently enrolled in high school</labl>
@@ -520,48 +526,57 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
     <var ID="vVMquYOzJJ7u4w6q" access="released" dcml="12" files="F1 F2" name="deathdate">
       <location EndPos="170" StartPos="153" width="18"/>
       <labl access="released" xml-lang="en">Date of Death</labl>
-      <txt>Date of death from administrative data.  This variable is obtained using a hierarchy of administrative sources:  (i) SSA's MBR file, (ii) SSA's SSR file, and (iii) the Census PCF with death information coming from the SSA Numident and Master Death Files.  This variable is coded as a SAS date variable. This format gives the number of days between the date of birth and January 1, 1960.  An individual born on January 1, 1959 would have birthdate=-365 and an individual born on January 1, 1961 would have birthdate=365.</txt>
+      <txt>
+        <p>Date of death from administrative data. This variable is obtained using a hierarchy of administrative sources: (i) SSA's MBR file, (ii) SSA's SSR file, and (iii) the Census PCF with death information coming from the SSA Numident and Master Death Files. This variable is coded as a SAS date variable. This format gives the number of days between the date of death and January 1, 1960. An individual who died on January 1, 1959 would have deathdate=-365 and an individual who died on January 1, 1961 would have deathdate=365.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V262" access="released" dcml="0" files="F1 F2" intrvl="contin" name="defer_der_fica_YYYY" xml-lang="xml-lang339">
       <location width="12"/>
       <labl access="released">DER: Deferred FICA</labl>
-      <txt>Deferred earnings from jobs covered by FICA tax; summed across all employers in the DER to give a person-level total for each year. The practice of withholding deferred wages from employee pay and reporting this on W-2 forms began in 1987.  However in the SSB, we restrict the time series for this variable to be 1990-2011. This decision is due to the fact that so few people had deferred wages between 1987 and 1989 that we could not reliably synthesize these variables.</txt>
+      <txt>
+        <p>Deferred earnings from jobs covered by FICA tax; summed across all employers in the DER to give a person-level total for each year. The practice of withholding deferred wages from employee pay and reporting this on W-2 forms began in 1987. However in the SSB, we restrict the time series for this variable to be 1990-2014. This decision is due to the fact that so few people had deferred wages between 1987 and 1989 that we could not reliably synthesize these variables.</p>
+      </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
     <var ID="V263" access="released" dcml="0" files="F1 F2" intrvl="contin" name="defer_der_nonfica_YYYY" xml-lang="xml-lang339">
       <location width="12"/>
       <labl access="released">DER: Deferred Non-FICA</labl>
-      <txt>Deferred earnings from jobs NOT covered by FICA tax; summed across all employers in the DER to give a person-level total for each year. The practice of withholding deferred wages from employee pay and reporting this on W-2 forms began in 1987. However in the SSB, we restrict the time series for this variable to be 1990-2011. This decision is due to the fact that so few people had deferred wages between 1987 and 1989 that we could not reliably synthesize these variables.</txt>
+      <txt>
+        <p>Deferred earnings from jobs NOT covered by FICA tax; summed across all employers in the DER to give a person-level total for each year. The practice of withholding deferred wages from employee pay and reporting this on W-2 forms began in 1987. However in the SSB, we restrict the time series for this variable to be 1990-2014. This decision is due to the fact that so few people had deferred wages between 1987 and 1989 that we could not reliably synthesize these variables.</p>
+      </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
     <var ID="Bc2pal2IlVq5Dugw" access="released" dcml="0" files="F1 F2" name="disab_nowork">
       <location EndPos="15" StartPos="15" width="1"/>
-      <labl access="released" xml-lang="en">Disability Prevents Work - (CORE or TM)</labl>
+      <labl access="released" xml-lang="en">Disability Prevents Work - (wave a or b)</labl>
       <txt>
-        <p>This variable indicates that a person had a work-preventing disability. This information comes from the disability topical module in the 1984, 1990-1993 panels. In the 1996-2008 panels, this variable is created from a combination of reports in the core and the disability topical module. We look across all waves of the panel and at the topical module and if ever there is a report of a work-preventing disability, we set this indicator to 1. The universe for this variable is all individuals who were at least age 15 and no older than age 70 by the end of the panel. The following disability variables from the core were used: 1996, 2001, 2004, Wave 6 in 2008 (EJOBCANT).</p>
+        <p>This variable indicates that a person had a work-preventing disability. If an individual indicates a work-preventing disability in wave 2, disab_nowork_a = 1. In all panels but 1984, this question is asked again in a later wave: individuals indicating a work-preventing disability in that question have disab_nowork_b = 1. The universe is all individuals who were at least age 15, no older than age 70 by the end of the panel, and answered "yes" to having a work-limiting disability. The relevant SIPP variable for disab_nowork_a is TM8332 for the 1990-1993 panels and eprevwk for the 1996, 2001, 2004, and 2008 panels. For disab_nowork_b, the relevant SIPP variable is TM8924 in the topical module for the 1990-1993 panels and edisprev in the core of the 1996, 2001, 2004, and 2008 panels. The variable comes from wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008.</p>
+        <p/>
       </txt>
       <catgry access="released">
         <catValu>0</catValu>
-        <labl>No</labl>
+        <labl>Disability does not prevent work</labl>
       </catgry>
       <catgry access="released">
         <catValu>1</catValu>
-        <labl>Yes</labl>
+        <labl>Disability prevents work</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="ZZW5DDh6mOQpmFLe" access="released" dcml="0" files="F1 F2" name="disab_worklimit">
       <location EndPos="14" StartPos="14" width="1"/>
-      <labl access="released" xml-lang="en">Work Limiting Disability - (CORE or TM)</labl>
-      <txt>This variable indicates that a person had a work-limiting disability.  This variable is created from a combination of reports in the core and the disability topical module. We look across all waves of the panel and at the topical module and if ever there is a report of a work-limiting disability, we set this indicator to 1. The universe for this variable is all individuals who were at least age 15 and no older than age 70 by the end of the panel. The following disability variables from the core were used: 1984, 1990-1993 (DISAB); 1996, 2001, 2004, &amp; 2008 (EDISABL). Disability topical modules were asked in the following waves, by panel: Wave 3 in 1984 (TM8450, TM8452); Wave 3 in 1990, 1991, &amp; 1993 (TM8918, TM8920); Wave 6 in 1992 (TM8918, TM8920); Wave 5 in 1996, 2001, &amp; 2004 (EJOBDIF); Wave 6 in 2008 (EJOBDIF).</txt>
+      <labl access="released" xml-lang="en">Work Limiting Disability - (wave a or b)</labl>
+      <txt>
+        <p>This variable indicates that a person had a work-limiting disability. The information for wave a always comes from the disability topical module in wave 2. If an individual indicates a work-limiting disability in wave 2, disab_worklimit_a = 1. In all panels but 1984, this question is asked again in a later wave. The wave 2 topical module variable that informs disab_worklimit_a is TM8452 in the 1984 panel, TM8306 in the 1990, 1991, 1992, and 1993 panels, and ELMTVER in the 1996, 2001, 2004, and 2008 panels. Individuals asked this question are aged 16 to 67 except in 1984 where the age universe extends to age 72. The respective SIPP variables that inform disab_worklimit_b are TM8918 and TM8920 (in the topical module) for 1990, 1991, 1992, and 1993 panels and EDISABL (in the core) for 1996, 2001, 2004, and 2008 panels. The relevant variable can be found in wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008. The universe for this variable is all individuals who were at least age 15 and no older than age 70 by the end of the panel.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
-        <labl>No</labl>
+        <labl>No work-limiting disability</labl>
       </catgry>
       <catgry access="released">
         <catValu>1</catValu>
-        <labl>Yes</labl>
+        <labl>Work-limiting disability</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -571,7 +586,9 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       <valrng access="released">
         <range UNITS="REAL" access="released" max="5" min="1"/>
       </valrng>
-      <txt>This variable was created from data collected by the education history topical module and represents the highest level of education achieved at that point in time.  The universe for this variables is all individuals who were age 15 at the beginning of their SIPP panel.  This topical module was asked in the following waves, by panel: Wave 3 in 1984 panel (TM8024, TM8028); Wave 2 in the 1990-1993 panels (TM8400, TM8408, TM8416, TM8422); Wave 2 in the 1996 &amp; 2001 panels (EATTAIN); in the 2004-2008 panels (EEDUCATE).</txt>
+      <txt>
+        <p>This variable was created from data collected by the education history topical module and represents the highest level of education achieved at that point in time. The universe for this variables is all individuals who were age 15 at the beginning of their SIPP panel. This topical module was asked in the following waves, by panel: Wave 3 in 1984 panel (TM8024, TM8028); Wave 2 in the 1990-1993 panels (TM8400, TM8408, TM8416, TM8422), 1996 and 2001 panels (EATTAIN); and 2004 and 2008 panels (EEDUCATE).</p>
+      </txt>
       <catgry access="released">
         <catValu>1</catValu>
         <labl>No high school degree</labl>
@@ -601,7 +618,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
         <range UNITS="REAL" access="released" max="20" min="0"/>
       </valrng>
       <txt>
-        <p>Field of bachelors degree as reported in the education history topical module. Universe if individuals who were age 15 by beginning of their SIPP panel and who had a bachelors degree. This topical module was asked in the following waves, by panel: Wave 3 in 1984 panel (TM8038); Wave 2 in the 1990-1993 panels (TM8428, TM8436); Wave 2 in the 1996-2008 panels (EBACHFLD). Categories vary for the 1996-2008 panels and for the 1990-1993 panels.</p>
+        <p>Field of bachelors degree as reported in the education history topical module. Universe is individuals who were age 15 by beginning of their SIPP panel and who had a bachelors degree. This topical module was asked in the following waves, by panel: Wave 3 in 1984 panel (TM8038); Wave 2 in the 1990-1993 panels (TM8428, TM8436); Wave 2 in the 1996-2008 panels (EBACHFLD). Categories vary between the 1996-2008 panels and the 1984 and 1990-1993 panels.</p>
       </txt>
       <catgry access="released">
         <catValu>0</catValu>
@@ -613,7 +630,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <catgry access="released">
         <catValu>2</catValu>
-        <labl>Art/Architecture (1996-2004 panels); Biology (1990-1993 panels)</labl>
+        <labl>Art/Architecture (1996-2008 panels); Biology (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>3</catValu>
@@ -621,57 +638,51 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <catgry access="released">
         <catValu>4</catValu>
-        <labl>Communications (1996-2004 panels); Economics (1990-1993 panels)</labl>
+        <labl>Communications (1996-2008 panels); Economics (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>5</catValu>
-        <labl>Computer and Information Sciences (1996-2004 panels); Education (1990-1993
-              panels)</labl>
+        <labl>Computer and Information Sciences (1996-2008 panels); Education (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>6</catValu>
-        <labl>Education (1996-2004 panels); Engineering (1990-1993 panels)</labl>
+        <labl>Education (1996-2008 panels); Engineering (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>7</catValu>
-        <labl>Engineering (1996-2004 panels); English/Journalism (1990-1993 panels)</labl>
+        <labl>Engineering (1996-2008 panels); English/Journalism (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>8</catValu>
-        <labl>English/Literature (1996-2004 panels); Home Economics (1990-1993 panels)</labl>
+        <labl>English/Literature (1996-2008 panels); Home Economics (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>9</catValu>
-        <labl>Foreign Language (1996-2004 panels); Law (1990-1993 panels)</labl>
+        <labl>Foreign Language (1996-2008 panels); Law (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>11</catValu>
-        <labl>Health Sciences (1996-2004 panels); Liberal Arts/Humanities (including arts,
-              architecture, music, languages, philosophy) (1990-1993 panels)</labl>
+        <labl>Health Sciences (1996-2008 panels); Liberal Arts/Humanities (including arts, architecture, music, languages, philosophy) (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>11</catValu>
-        <labl>Liberal Arts/Humanities (1996-2004 panels); Mathematics/Statistics (1990-1993
-              panels)</labl>
+        <labl>Liberal Arts/Humanities (1996-2008 panels); Mathematics/Statistics (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>12</catValu>
-        <labl>Mathematics/Statistics (1996-2004 panels); Medicine (1990-1993 panels)</labl>
+        <labl>Mathematics/Statistics (1996-2008 panels); Medicine (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>13</catValu>
-        <labl>Nature Sciences (Biological and Physical) (1996-2004 panels); Nursing,
-              Pharmacy, Health Technologies (1990-1993)</labl>
+        <labl>Nature Sciences (Biological and Physical) (1996-2008 panels); Nursing, Pharmacy, Health Technologies (1984, 1990-1993)</labl>
       </catgry>
       <catgry access="released">
         <catValu>14</catValu>
-        <labl>Philosophy/Religion/Theology (1996-2004 panels); Physical or Earth Sciences
-              (1990-1993 panels)</labl>
+        <labl>Philosophy/Religion/Theology (1996-2008 panels); Physical or Earth Sciences (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>15</catValu>
-        <labl>Pre-Professional (1996-2004 panels); Police Science or Law Enforcement
-              (1990-1993 panels)</labl>
+        <labl>Pre-Professional (1996-2008 panels); Police Science or Law Enforcement (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>16</catValu>
@@ -679,20 +690,19 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <catgry access="released">
         <catValu>17</catValu>
-        <labl>Social Sciences/History (1996-2004 panels); Religion/Theology (1990-1993
-              panels)</labl>
+        <labl>Social Sciences/History (1996-2008 panels); Religion/Theology (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>18</catValu>
-        <labl>Other (1996-2004 panels); Social Sciences (1990-1993 panels)</labl>
+        <labl>Other (1996-2008 panels); Social Sciences (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>19</catValu>
-        <labl>Vocational or Technical Studies (1990-1993 panels)</labl>
+        <labl>Vocational or Technical Studies (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released">
         <catValu>20</catValu>
-        <labl>Other (1990-1993 panels)</labl>
+        <labl>Other (1984, 1990-1993 panels)</labl>
       </catgry>
       <catgry access="released" missing="Y">
         <catValu>Sysmiss</catValu>
@@ -711,7 +721,9 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>Flag to indicate that this respondent died after being interviewed and before 2011.  This flag indicates the existence of a valid value for deathdate.</txt>
+      <txt>
+        <p>Flag to indicate that this respondent died after being interviewed and before 2014. This flag indicates the existence of a valid value for deathdate.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Death date does not exist, respondent did not die during this interval</labl>
@@ -745,7 +757,9 @@ The marital history topical module asks about a person's first and second marria
     </var>
     <var ID="V302" access="released" name="foodstp_M">
       <labl access="released">Indicator for receipt of SNAP/Food Stamps</labl>
-      <txt>This variable indicates that a respondent received food stamps/SNAP benefits in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I27REC1-I27REC4 in 1984; R27 in the 1990, 1991, 1992, and 1993 panels; ER27 in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable indicates that a respondent received food stamps/SNAP benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. This variable comes from the core file. The relevant SIPP variables are I27REC1, I27REC2, I27REC3, I27REC4 in the 1984 panel; R27 in the 1990, 1991, 1992, and 1993 panels; and ER27 in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not receive food stamps/SNAP benefits</labl>
@@ -754,6 +768,7 @@ The marital history topical module asks about a person's first and second marria
         <catValu>1</catValu>
         <labl>Received food stamps/SNAP benefits</labl>
       </catgry>
+      <concept>numeric</concept>
     </var>
     <var ID="qSB7jOmJS9ZdFn4V" access="released" dcml="0" files="F1 F2" name="foreign_born">
       <location EndPos="12" StartPos="12" width="1"/>
@@ -761,7 +776,9 @@ The marital history topical module asks about a person's first and second marria
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>Immigrant Status, born in country other than U.S.Taken from Wave 8 topical module in the 1984 panel and Wave 2 topical module in the 1990-1993, 2001, 2004, &amp; 2008 panels (TM8128, TM8166, TM8174 in the 1984 panel; TM8730, TM8734, TM8709 in the 1990-1993 panels; eprstate, ebrstate and rcitiznt in the 1996 panel; eprstate, ebrstate and tcitiznt 2001 panel; eprstate, ebrstate, citiz, and ebornus in the 2004 &amp; 2008 panels).</txt>
+      <txt>
+        <p>Immigrant Status, born in country other than U.S. Taken from the Wave 8 topical module in the 1984 panel and Wave 2 topical module in the 1990, 1991, 1992, 1993, 1996, 2001, 2004, and 2008 panels. The relevant variables from the SIPP are TM8128, TM8166, and TM8174 in the 1984 panel; TM8730, TM8734, and TM8709 in the 1990, 1991, 1992, and 1993 panels; EPRSTATE, EBRSTATE, and RCITIZNT in the 1996 panel; EPRSTATE, EBRSTATE, and TCITIZNT for the 2001 panel; EPRSTATE, EBRSTATE, CITIZ, and EBORNUS in the 2004 and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Born in U.S.</labl>
@@ -774,7 +791,9 @@ The marital history topical module asks about a person's first and second marria
     </var>
     <var ID="V303" access="released" name="fsamt_M">
       <labl access="released">SNAP/Food Stamps Amount Received</labl>
-      <txt>This variable is the amount of food stamps/SNAP benefits that a respondent received in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I27AMT1-I27AMT4 in 1984; S27AMT in the 1990, 1991, 1992, and 1993 panels; T27AMT in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable is the amount of food stamps/SNAP benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The relevant SIPP variables are I27AMT1, I27AMT2, I27AMT3, I27AMT4 in the 1984 panel; S27AMT in the 1990, 1991, 1992, and 1993 panels; T27AMT in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V293" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="hicov_M" xml-lang="xml-lang339">
@@ -783,7 +802,10 @@ The marital history topical module asks about a person's first and second marria
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>A variable in this array indicates whether an individual was covered by health insurance during month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. Health insurance coverage is derived from the following variables: HIIND in the 1984 &amp; 1990-1993 panels; EHIMTH in the 1996-2008 panels.</txt>
+      <txt>
+        <p>A variable in this array indicates whether an individual was covered by health insurance during month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. Health insurance coverage is derived from the following SIPP variables: HIIND for the 1984, 1990, 1991, 1992, and 1993 panels; EHIMTH for the 1996, 2001, 2004, and 2008 panels.</p>
+        <p/>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Respondent did not have health insurance coverage during this month</labl>
@@ -803,7 +825,10 @@ The marital history topical module asks about a person's first and second marria
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>A variable in this array indicates whether an individual was covered by employer-provided health insurance during month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. Employer-provided health insurance coverage is derived from the following variables: HISRC in the 1990-1993 panels; EHEMPLY in the 1996-2008 panels. Note: this question was not included in the 1984 panel.</txt>
+      <txt>
+        <p>A variable in this array indicates whether an individual was covered by employer-provided health insurance during month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. Employer-provided health insurance coverage is derived from the following variables: HISRC in the 1990, 1991, 1992, and 1993 panels; EHEMPLY in the 1996, 2001, 2004, and 2008 panels. Note that this question is not asked in the 1984 panel.</p>
+        <p/>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Respondent did not have employer-provided health insurance</labl>
@@ -823,7 +848,9 @@ The marital history topical module asks about a person's first and second marria
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>In the 1984 &amp; 1990-1993 SIPP panels, a value for ethnicity is included on each wave file.  Thus, there are actually as many ethnicity variables as there are waves of the survey and some changes occur across waves as a result of data collection error.  Ethnicity is chosen by creating an array of variables ethncty1-ethncty{max number of waves} and choosing the first non-missing value.  Thus, ethnicity comes from the first wave in which the individual was interviewed instead of from a fixed point in the survey.  Respondents are coded as Hispanic if they have an ethnicity code between 14 and 20.  In the 1996-2008 panels, the longitudinally-edited version contains only one value for ethnicity across all waves (eorigin) and this value is used.  Respondents are coded as Hispanic if they have an ethnicity code between 20 and 28 in 1996 and 2001, or if they have an ethnicity code of 1 in 2004 &amp; 2008.</txt>
+      <txt>
+        <p>In the 1984, 1990, 1991, 1992, and1993 SIPP panels, a value for ethnicity is included on each wave file. Thus, there are actually as many ethnicity variables as there are waves of the survey and some changes occur across waves as a result of data collection error. Ethnicity is chosen by creating an array of variables ethncty1-ethncty{max number of waves} and choosing the first non-missing value. Thus, ethnicity comes from the first wave in which the individual was interviewed instead of from a fixed point in the survey. Respondents are coded as Hispanic if they have an ethnicity code between 14 and 20. In the 1996, 2001, 2004, and 2008 panels, the longitudinally-edited version contains only one value for ethnicity across all waves (EORIGIN) and this value is used. Respondents are coded as Hispanic if they have an ethnicity code between 20 and 28 in 1996 and 2001, or if they have an ethnicity code of 1 in 2004 2008.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Non-hispanic</labl>
@@ -837,35 +864,101 @@ The marital history topical module asks about a person's first and second marria
     <var ID="a29oUbIrkIXwM8A8" access="released" dcml="18" files="F1 F2" name="homeequity">
       <location EndPos="229" StartPos="209" width="21"/>
       <labl access="released" xml-lang="en">Home Equity</labl>
-      <txt>Home equity value as reported in the wealth topical module, collected in the following waves, by panel: Wave 4 in the 1984 (HHTHEQ) &amp; 1990-1993 (HH_THEQ) panels ; Wave 3 in 1996, 2001, &amp; 2004 (THHTHEQ) panels; Wave 4 in 2008 panel (THHTHEQ).</txt>
+      <txt>
+        <p>Home equity value as reported in the wealth topical module, collected in the following waves, by panel: Wave 4 in the 1984 panel (variable name HHTHEQ); Wave 4 in the 1990, 1991, 1992, and 1993 panels (HH_THEQ); Wave 3 in the 1996, 2001, and 2004 panels (THHTHEQ); and Wave 4 in 2008 panel (THHTHEQ).</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="WBTgghT1bYivuT0f" access="released" dcml="0" files="F1 F2" name="ind_4cat">
       <location EndPos="80" StartPos="80" width="1"/>
-      <labl access="released" xml-lang="en">Industry Category (4)</labl>
+      <labl access="released" xml-lang="en">Industry Category for Primary Job in Wave W</labl>
       <valrng access="released">
         <range UNITS="REAL" access="released" max="4" min="1"/>
       </valrng>
       <txt>Industry is a characteristic of an individual's job and hence varies over time.  There are industry values reported for (potentially) two jobs in each wave of the survey.  Industry is chosen by summing earnings associated with the array of variables ws1ind1-ws1ind{max number of waves} and ws2ind1-ws2ind{max number of waves} in the 1984,1990-1993 panels, and ejbind1_1-ejbind1_{max number of waves) and ejbind2_1-ejbind2_{max number of waves} in the 1996-2008 panels and choosing the industry associated with the greatest total earnings.  Thus industry is the industry from which greatest earnings are derived in the survey.</txt>
       <catgry access="released">
         <catValu>1</catValu>
-        <labl>Manufacturing</labl>
+        <labl>Agriculture, Fishing, Forestry, Hunting</labl>
       </catgry>
       <catgry access="released">
         <catValu>2</catValu>
-        <labl>Wholesale/retail trade</labl>
+        <labl>Gas, Mining, Oil</labl>
       </catgry>
       <catgry access="released">
         <catValu>3</catValu>
-        <labl>FIRE, services, public administration, military</labl>
+        <labl>Construction</labl>
       </catgry>
       <catgry access="released">
         <catValu>4</catValu>
-        <labl>Agriculture, mining, construction, transportation, communications, and public
-              utilities</labl>
+        <labl>Manufacturing</labl>
       </catgry>
-      <catgry access="released" missing="Y">
-        <catValu>Sysmiss</catValu>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>Wholesale Trade</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>Resale Trade</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Transportation and Warehousing</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Utilities</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Information</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>Finance and Insurance</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>Real Estate, Rental of Goods</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>Professional, Scientific, and Technical Services</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>Management of companies/enterprises</labl>
+      </catgry>
+      <catgry>
+        <catValu>14</catValu>
+        <labl>Administrative, support, waste management services</labl>
+      </catgry>
+      <catgry>
+        <catValu>15</catValu>
+        <labl>Educational Services</labl>
+      </catgry>
+      <catgry>
+        <catValu>16</catValu>
+        <labl>Health Care and Social Assistance</labl>
+      </catgry>
+      <catgry>
+        <catValu>17</catValu>
+        <labl>Arts, Entertainment, and Recreation</labl>
+      </catgry>
+      <catgry>
+        <catValu>18</catValu>
+        <labl>Accommodation and Food Services</labl>
+      </catgry>
+      <catgry>
+        <catValu>19</catValu>
+        <labl>Other Services, except public domain</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>Public Administration</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>Military (specifically, last or present job was or is in the armed forces)</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -901,14 +994,16 @@ The marital history topical module asks about a person's first and second marria
     <var ID="lJFN1PltOyO9elMn" access="released" dcml="0" files="F1 F2" name="layoff_M">
       <location EndPos="500" StartPos="489" width="12"/>
       <labl access="released" xml-lang="en">On Layoff (Without Pay)</labl>
-      <txt>Indicator that individual was on layoff without pay in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The variables from which layoff without pay are derived are the following: SC1098 in 1984; REASAB in the 1990-1993 panels; ELAYOFF in the 1996-2008 panels.</txt>
+      <txt>
+        <p>Indicator that the individual was on layoff without pay in month M of year Y. M goes from 1 to 12 and represents calendar month. Y goes from 1 to 6 and represents number calendar year of the given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The relevant SIPP variables are SC1098 in the 1984 panel; REASAB in the 1990, 1991, 1992, and 1993 panels; and ELAYOFF in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
-        <labl>No</labl>
+        <labl>Not on layoff without pay</labl>
       </catgry>
       <catgry access="released">
         <catValu>1</catValu>
-        <labl>Yes</labl>
+        <labl>On layoff without pay</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -946,8 +1041,9 @@ The marital history topical module asks about a person's first and second marria
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>In the Census-internal SIPP panels, a value for sex is included on each wave file.  Thus, there are actually as many sex variables as there are waves of the survey and some changes occur across waves as a result of data collection error.  Sex is selected from the array of variables sex1-sex{max number of waves} in which the wave corresponds either to the month in which marital status is first observed (for those without spouses during the course of the SIPP) or to the month in which the respondent's spouse is assigned.  As with the SIPP, the SSB does not allow same-sex couples to report being married and hence gender must be chosen to be consistent with the spouse's gender instead of from a fixed point in the survey.  Thus when a spouse is never assigned, an individual's gender comes from the first wave where they report being not married.  For individuals who are assigned a spouse, gender comes from the first wave where they reveal their spouse.
-This indicator variable is set to 1 if the individual was male and was created from the original categorical sex variable for analytic convenience.This variable is unsynthesized on the SSB and is never missing so there are no imputed values in the Completed Data.</txt>
+      <txt>
+        <p>In the Census-internal SIPP panels, a value for sex is included on each wave file. Thus, there are actually as many sex variables as there are waves of the survey and some changes occur across waves as a result of data collection error. Sex is selected from the array of variables sex1-sex{max number of waves} in which the wave corresponds either to the month in which marital status is first observed (for those without spouses during the course of the SIPP) or to the month in which the respondent's spouse is assigned. As with the SIPP, the SSB does not allow same-sex couples to report being married and hence gender must be chosen to be consistent with the spouse's gender instead of from a fixed point in the survey. Thus when a spouse is never assigned, an individual's gender comes from the first wave where they report being not married. For individuals who are assigned a spouse, gender comes from the first wave where they reveal their spouse. This indicator variable is set to 1 if the individual was male and was created from the original categorical sex variable for analytic convenience.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Female</labl>
@@ -1442,25 +1538,106 @@ This indicator variable is set to 1 if the individual was male and was created f
     </var>
     <var ID="EaKFscwxtuBoQbB3" access="released" dcml="0" files="F1 F2" name="occ_3cat">
       <location EndPos="81" StartPos="81" width="1"/>
-      <labl access="released" xml-lang="en">SIPP-reported occupation - three categories</labl>
-      <valrng access="released">
-        <range UNITS="REAL" access="released" max="3" min="1"/>
+      <labl access="released" xml-lang="en">Occupation Category for Primary Job in Wave W</labl>
+      <valrng access="restricted">
+        <range UNITS="REAL" access="restricted" max="3" min="1"/>
       </valrng>
       <txt>Occupation is a characteristic of an individual's job and hence varies over time.  There are occupation values reported for (potentially) two jobs in each wave of the survey.  Occupation is chosen by summing earnings associated with the array of variables ws1occ1-ws1occ{max number of waves} and ws2occ1-ws2occ{max number of waves} in the 1984, 1990-1993 panels, and tjbocc1_1-tjbocc1_{max number of waves) and tjbocc2_1-tjbocc2_{max number of waves} in the 1996-2008 panels and choosing the occupation associated with the greatest total earnings.  Thus occupation is the occupation from which greatest earnings are derived in the survey.</txt>
       <catgry access="released">
         <catValu>1</catValu>
-        <labl>Managerial and professional specialty occupations</labl>
+        <labl>Management</labl>
       </catgry>
       <catgry access="released">
         <catValu>2</catValu>
-        <labl>Technical, sales, and administrative support occupations</labl>
+        <labl>Business and financial operations</labl>
       </catgry>
       <catgry access="released">
         <catValu>3</catValu>
-        <labl>Other</labl>
+        <labl>Business and financial operations</labl>
       </catgry>
-      <catgry access="released" missing="Y">
-        <catValu>Sysmiss</catValu>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>Architecture and engineering</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>Life, physical, and social science</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>Community and social service</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>Legal</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>Education, training, and libraries</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Arts, design, entertainment, sports, and media</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>Healthcare practitioner and technical</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>Healthcare support</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>Protective service</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>Food prep and service</labl>
+      </catgry>
+      <catgry>
+        <catValu>14</catValu>
+        <labl>Building and grounds cleaning and maintenance</labl>
+      </catgry>
+      <catgry>
+        <catValu>15</catValu>
+        <labl>Personal care and service</labl>
+      </catgry>
+      <catgry>
+        <catValu>16</catValu>
+        <labl>Sales</labl>
+      </catgry>
+      <catgry>
+        <catValu>17</catValu>
+        <labl>Office and administrative support</labl>
+      </catgry>
+      <catgry>
+        <catValu>18</catValu>
+        <labl>Farming, fishing, and forestry</labl>
+      </catgry>
+      <catgry>
+        <catValu>19</catValu>
+        <labl>Construction and extraction</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>Installation, maintenance, and repairs</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>Production</labl>
+      </catgry>
+      <catgry>
+        <catValu>22</catValu>
+        <labl>Transportation</labl>
+      </catgry>
+      <catgry>
+        <catValu>23</catValu>
+        <labl>Material moving</labl>
+      </catgry>
+      <catgry>
+        <catValu>24</catValu>
+        <labl>Military</labl>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -1487,7 +1664,9 @@ This indicator variable is set to 1 if the individual was male and was created f
       <valrng access="released">
         <range UNITS="REAL" access="released" max="1" min="0"/>
       </valrng>
-      <txt>This variable indicates whether an individual owns a home at the time of the wealth topical module in the person's SIPP panel.  The wealth topical module is conducted in the following waves by panel: wave 4 in the 1984 &amp; 1990-1993 panels (TM8530, TM8608). In panels 1996-2004, tenure is available for each month of the survey, for this variable (own_home), tenure is defined as tenure during 12th month in the survey (ETENURE), and the universe for the real estate/wealth topical module is defined in wave 3 (EHREUNV). In 2008, ETENURE is also from the 12th month of the survey (ETENURE), and the universe fer the real estate/wealth topical module is defined in wave 4 (EHREUNV).</txt>
+      <txt>
+        <p>This variable indicates whether an individual owns a home at the time of the wealth topical module in the person's SIPP panel. The wealth topical module is conducted in the following waves by panel: wave 4 in the 1984 and 1990-1993 panels (TM8530, TM8608). In the 1996, 2001, and 2004 panels, tenure is available for each month of the survey. For this variable (own_home), tenure is defined as tenure during 12th month in the survey (ETENURE), and the universe for the real estate/wealth topical module is defined in wave 3 (EHREUNV). In 2008, ETENURE is also from the 12th month of the survey (ETENURE), and the universe for the real estate/wealth topical module is defined in wave 4 (EHREUNV).</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Do not own a home</labl>
@@ -1504,7 +1683,9 @@ This indicator variable is set to 1 if the individual was male and was created f
       <valrng access="released">
         <range UNITS="REAL" access="released" max="20" min="0"/>
       </valrng>
-      <txt>This variable contains the number of children ever born to a person (i.e. count of biological children).  This is taken from the wave two fertility history topical module (TM8752 and TM8754 for 1984, 1990-1993 panels; tfrchl and tmomchl for 1996-2008 panels) and is in universe for men and women ages 15-64.</txt>
+      <txt>
+        <p>This variable contains the number of children ever born to a person (i.e. count of biological children). This is taken from the wave two fertility history topical module (TM8752 and TM8754 for 1984, 1990-1993 panels; tfrchl and tmomchl for 1996-2008 panels) and is in universe for men and women ages 15-64.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="CZQjZC5wS13WiWJM" access="released" dcml="0" files="F1 F2" name="panel">
@@ -1572,7 +1753,7 @@ This indicator variable is set to 1 if the individual was male and was created f
       <location EndPos="448" StartPos="431" width="18"/>
       <labl access="released" xml-lang="en">PHUS: startdate of aged spouse benefits</labl>
       <txt>
-        <p>This start date variable tells when the first aged spouse benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2012.</p>
+        <p>This start date variable tells when the first aged spouse benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2014.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -1587,7 +1768,9 @@ This indicator variable is set to 1 if the individual was male and was created f
     <var ID="KOn1OFkdBDKkLgSI" access="released" dcml="12" files="F1 F2" name="phus_retire_benefit_stdate">
       <location EndPos="376" StartPos="359" width="18"/>
       <labl access="released" xml-lang="en">PHUS: startdate of retirement benefits</labl>
-      <txt>This startdate variable tells when the first own retirement benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This startdate can differ from the MBR startdate which records only eligiblity and not actual payments.  The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2012.</txt>
+      <txt>
+        <p>This startdate variable tells when the first own retirement benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This startdate can differ from the MBR startdate which records only eligiblity and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2014.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="usyrNih8bSmRGveq" access="released" dcml="13" files="F1 F2" name="phus_retire_benefit_totamt">
@@ -1600,7 +1783,7 @@ This indicator variable is set to 1 if the individual was male and was created f
       <location EndPos="721" StartPos="704" width="18"/>
       <labl access="released" xml-lang="en">PHUS: SSDI benefit start date 1</labl>
       <txt>
-        <p>This start date variable tells when the first SSDI benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2012.</p>
+        <p>This start date variable tells when the first SSDI benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2014.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -1616,7 +1799,7 @@ This indicator variable is set to 1 if the individual was male and was created f
       <location EndPos="520" StartPos="503" width="18"/>
       <labl access="released" xml-lang="en">PHUS: startdate of widowed spouse benefits</labl>
       <txt>
-        <p>This start date variable tells when the first widowed spouse benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2012.</p>
+        <p>This start date variable tells when the first widowed spouse benefit payment was recorded in the Payment History Update System, the administrative database maintained by SSA to track actual payments made to beneficiaries. This start date can differ from the MBR start date which records only eligibility and not actual payments. The PHUS began in 1984 and hence the earliest possible start date is January 1984. The latest possible start date is December 2014.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -1658,9 +1841,9 @@ This indicator variable is set to 1 if the individual was male and was created f
     </var>
     <var ID="Wg3F7xTn5vEQzKHz" access="released" dcml="0" files="F1 F2" name="pos_phus_ssdi_benefit_totamt_k">
       <location EndPos="703" StartPos="703" width="1"/>
-      <labl access="released">PHUS: indicator of positive SSDI benefit amount in month k (where k=1 to 4)</labl>
+      <labl access="released">PHUS: indicator of positive SSDI benefit amount for application k</labl>
       <txt>
-        <p>Indicator that the PHUS recorded a positive SSDI benefit amount (and consequently had a non-missing PHUS start date) at some point after the MBR eligibility start date.</p>
+        <p>Indicator that the PHUS recorded a positive SSDI benefit amount (and consequently had a non-missing PHUS start date) at some point after the MBR eligibility start date. Individuals in the SSB may have information on up to 4 SSDI applications (k = 1 to 4).</p>
       </txt>
       <catgry access="released">
         <catValu>0</catValu>
@@ -1731,7 +1914,9 @@ This indicator variable is set to 1 if the individual was male and was created f
     <var ID="dDIBZcU2LXvYDAJS" access="released" dcml="0" files="F1 F2" intrvl="contin" name="spouse_personid" xml-lang="xml-lang339">
       <location EndPos="115" StartPos="110" width="6"/>
       <labl access="released">Personid of spouse</labl>
-      <txt>Personid of linked spouse, defined as the first person to whom the SIPP respondent was married during the time period covered by the SIPP panel.  Individuals could enter the panel already married and then each would be linked to the other.  Individuals could also get married during the course of the panel.  If this was the first observed marriage for each member of the couple, they were linked together.  Individuals could also get divorced during the course of the panel and then remarry.  In many cases, this later marriage caused a new individual to join the panel.  This new SIPP respondent would only be linked to his or her spouse if the spouse (and original SIPP sample member) had not already been observed married to someone else.  If the original SIPP sample member had been previously linked by marriage to another SIPP sample member, this original link was maintained in spouse_personid.  However the marital history reflects the ending of this marriage and the occurrence of the next marriage for the original SIPP sample member.  Likewise, the new SIPP sample member who joins through marriage will have that marriage date recorded in his or her marital history but will have a blank spouse_personid.  In summary, this variable captures only one marriage partner and does not provide a history of marriage partners even if this history is (partially) observed in the SIPP.    The link between SIPP respondents and their spouses has not been perturbed in any way in the SSB.  The same individuals will be linked as married partners in the Gold Standard, the Completed Data, and the SSB.   In order to strengthen confidentiality protection, however, spouse_personid in the SSB does not link records across implicates or to the Gold Standard and Completed Data files, i.e. within each synthetic implicate it is a random number that can only be used for matching spouses within that implicate.</txt>
+      <txt>
+        <p>Personid of linked spouse, defined as the first person to whom the SIPP respondent was married during the time period covered by the SIPP panel. Individuals could enter the panel already married and then each would be linked to the other. Individuals could also get married during the course of the panel. If this was the first observed marriage for each member of the couple, they were linked together. Individuals could also get divorced during the course of the panel and then remarry. In many cases, this later marriage caused a new individual to join the panel. This new SIPP respondent would only be linked to his or her spouse if the spouse (and original SIPP sample member) had not already been observed married to someone else. If the original SIPP sample member had been previously linked by marriage to another SIPP sample member, this original link was recorded in spouse_personid. However the marital history reflects the ending of this marriage and the occurrence of the next marriage for the original SIPP sample member. Likewise, the new SIPP sample member who joins through marriage will have that marriage date recorded in his or her marital history but will have a blank spouse_personid. In summary, this variable captures only one marriage partner and does not provide a history of marriage partners even if this history is (partially) observed in the SIPP. In the SSB, the marital link between SIPP respondents denoted by personid and spouse_personid has been synthesized so that family characteristics cannot be used as a blocking variable in a re-identification attack.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric"/>
     </var>
     <var ID="BKmTH5vWjLVW3RWp" access="released" dcml="12" files="F1 F2" name="ssr_ssi_appl_dt">
@@ -2141,7 +2326,9 @@ This indicator variable is set to 1 if the individual was male and was created f
       <valrng access="released">
         <range UNITS="REAL" access="released" max="10" min="1"/>
       </valrng>
-      <txt>This variable gives the year block when a respondent immigrated in the United States and is in scope when foreign_born=1.  The year of arrival to the U.S. is from the migration history wave 2 topical module (TM8736 for 1984, 1990-1993; emoveus 1996-2008).  Year blocks are generally five years but are as wide as 9 years and as short as 2 years.  Categories are:  1=1959 or earlier; 2=1960-1964; 3=1965-1969; 4=1970-1974; 5=1974-1979; 6=1980-1981; 7=1982-1984; 8=1985-1993; 9=1994-1999; 10=2000-2004; 11=2005-2009; 12=2010-2014</txt>
+      <txt>
+        <p>This variable gives the year block when a respondent immigrated in the United States and is in-scope when foreign_born=1. The year of arrival to the U.S. is from the migration history wave 2 topical module (TM8736 for 1984, 1990-1993; emoveus for 1996, 2001, 2004, and 2008). Year blocks are generally five years but are as wide as 9 years and as short as 2 years. Categories are: 1=1959 or earlier; 2=1960-1964; 3=1965-1969; 4=1970-1974; 5=1974-1979; 6=1980-1981; 7=1982-1984; 8=1985-1993; 9=1994-1999; 10=2000-2004; 11=2005-2009; 12=2010-2014</p>
+      </txt>
       <catgry access="released">
         <catValu>1</catValu>
         <labl>Before 1959</labl>
@@ -2199,38 +2386,48 @@ This indicator variable is set to 1 if the individual was male and was created f
     <var ID="W3m8XhfOXoQ9aaYj" access="released" dcml="0" files="F1 F2" name="total_der_fica_YYYY">
       <location EndPos="560" StartPos="549" width="12"/>
       <labl access="released" xml-lang="en">DER: Total earnings from FICA-covered jobs</labl>
-      <txt>Total earnings from all FICA-covered jobs with W-2 or Schedule C (self-employment) filings.  These earnings are the sum of amounts from Box 1 (Total Wages, Tips, and Bonuses) and Box 12 (earnings deferred to a 401(k) type account).  This array extends from 1978-2011.</txt>
+      <txt>
+        <p>Total earnings from all FICA-covered jobs with W-2 or Schedule C (self-employment) filings. These earnings are the sum of amounts from Box 1 (Total Wages, Tips, and Bonuses) and Box 12 (earnings deferred to a 401(k) type account). This array extends from 1978-2014.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="RjJd1SXNGhEKTEBT" access="released" dcml="0" files="F1 F2" name="total_der_nonfica_YYYY">
       <location EndPos="572" StartPos="561" width="12"/>
       <labl access="released" xml-lang="en">DER: Total earnings from all non-FICA jobs</labl>
-      <txt>Total earnings from all non-FICA-covered jobs with W-2 or Schedule C (self-employment) filings. These earnings are the sum of amounts from Box 1 (Total Wages, Tips, and Bonuses) and Box 12 (earnings deferred to a 401(k) type account). This array extends from 1978-2011.</txt>
+      <txt>
+        <p>Total earnings from all non-FICA-covered jobs with W-2 or Schedule C (self-employment) filings. These earnings are the sum of amounts from Box 1 (Total Wages, Tips, and Bonuses) and Box 12 (earnings deferred to a 401(k) type account). This array extends from 1978-2014.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V299" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totearn_M">
       <location width="9"/>
       <labl access="released">Total Earnings</labl>
-      <txt>This variable contains total monthly person-level earnings as reported in the SIPP for month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. This includes both job and business (self-employment) earnings and is top-coded. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe.</txt>
+      <txt>
+        <p>This variable contains total monthly person-level earnings as reported in the SIPP for month M of year Y. M goes from 1 to 12 and represents calendar month. Y goes from 1 to 6 and represents the number calendar year for the given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The corresponding SIPP variables are PP-EARN1, PP-EARN2, PP-EARN3, PP-EARN4 in the 1984 panel; EARN for the 1990, 1991, 1992, and 1993 panels; and TPEARN for the 1996, 2001, 2004, and 2008 panels. This variable includes both jobs and businesses (self-employment) earnings and is top-coded.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V258" access="released" dcml="0" files="F1 F2" intrvl="contin" name="totearn_ser_YYYY" xml-lang="xml-lang339">
       <location width="12"/>
       <labl access="released">SER: Capped Earnings from all FICA-covered jobs</labl>
-      <txt>Person-level annual earnings that were taxed by FICA; these variables include earnings only up to the FICA taxable maximum and cover the years 1951-2011.  These earnings are the inputs for calculating the OASDI benefit a person and his or her spouse will receive upon retirement or disability.</txt>
+      <txt>
+        <p>Person-level annual earnings that were taxed by FICA; these variables include earnings only up to the FICA taxable maximum and cover the years 1951-2014. These earnings are the inputs for calculating the OASDI benefit a person and his or her spouse will receive upon retirement or disability.</p>
+      </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
     <var ID="V296" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="tothours_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Total Usual Weekly Hours Worked at All Jobs</labl>
-      <txt>Total number of usual weekly hours worked at all regular employment jobs in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe.</txt>
+      <txt>
+        <p>This variable is calculated based on usual hours worked per week and weeks worked with pay in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for the given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The SIPP asks for usual hours worked per week for up to two jobs. The usual hours for job 1 and job 2 are combined and then multiplied by the weeks worked with pay that month (see wkswp_Y_M). The usual hours worked SIPP variables are WS12024 and WS22024 in the 1984 panel; WS12025 and WS22125 in the 1990, 1991, 1992, and 1993 panels; and EJBHRS1 and EJBHRS2 in the 1996, 2001, 2004, and 2008 panels. Total usual hours worked per week is capped at 99 in the GSF and SSB; therefore, the cap for totalhrs_Y_M is 99 multiplied by wkswp_Y_M.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V295" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="totinc_M" xml-lang="xml-lang339">
       <location width="9"/>
       <labl access="released">Total Personal Income</labl>
       <txt>
-        <p>Total personal income summed from all sources in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe for panels 1984, 1990, 1991, 1992, 1993, 2001. Panels 1996 and 2008 go up to month 48 and panel 2004 goes up to month 36. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe.</p>
+        <p>Total personal income summed from all sources in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The relevant SIPP variable is PPTOTIN1, PPTOTIN2, PPTOTIN3, and PPTOTIN4 in the 1984 panel; TOTINC in the 1990, 1991, 1992, and 1993 panels; and TPTOTINC in the 1996, 2001, 2004, and 2008 panels.</p>
       </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
@@ -2242,12 +2439,16 @@ This indicator variable is set to 1 if the individual was male and was created f
     </var>
     <var ID="V304" access="released" name="vcamt_M">
       <labl access="released">Amount of veterans compensation or pension benefit</labl>
-      <txt>This variable is the amount of veterans compensation or pension benefits that a respondent received in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I08AMT1-I08AMT4 in 1984; S08AMT in the 1990, 1991, 1992, and 1993 panels; T08AMT in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable is the amount of veterans compensation or pension benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I08AMT1-I08AMT4 in 1984; S08AMT in the 1990, 1991, 1992, and 1993 panels; T08AMT in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V305" access="released" name="vetrecip_M">
       <labl access="released">Indicator for receipt of veterans compensation or pension benefits</labl>
-      <txt>This variable indicates that a respondent received veterans compensation or pension benefits in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I08REC1-I08REC4 in 1984; R08 in the 1990, 1991, 1992, and 1993 panels; ER08 in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable indicates that a respondent received veterans compensation or pension benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I08REC1-I08REC4 in 1984; R08 in the 1990, 1991, 1992, and 1993 panels; ER08 in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not receive veterans compensation or veterans benefits</labl>
@@ -2259,12 +2460,16 @@ This indicator variable is set to 1 if the individual was male and was created f
     </var>
     <var ID="V306" access="released" name="wcamt_M">
       <labl access="released">Amount of Workers Compensation Received</labl>
-      <txt>This variable is the amount of workers compensation benefits that a respondent received in this month and year. The variable comes from the core file. I10AMT1-I10AMT4 in 1984; S10AMT in the 1990, 1991, 1992, and 1993 panels; T10AMT in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable is the amount of workers compensation benefits that a respondent received in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I10AMT1-I10AMT4 in 1984; S10AMT in the 1990, 1991, 1992, and 1993 panels; T10AMT in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V307" access="released" name="wkcomp_M">
       <labl access="released">Indicator for receipt of workers compensation</labl>
-      <txt>This variable indicates that a respondent received workers compensation benefits in month M. M goes from 1 to 48 and represents the month number since the start of panel_1stfullyear. The variable comes from the core file. I10REC1-I10REC4 in 1984; R10 in the 1990, 1991, 1992, and 1993 panels; ER10 in the 1996, 2001, 2004, and 2008 panels.</txt>
+      <txt>
+        <p>This variable indicates that a respondent received workers compensation benefits in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. The variable comes from the core file. The relevant SIPP variables are I10REC1-I10REC4 in 1984; R10 in the 1990, 1991, 1992, and 1993 panels; ER10 in the 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
       <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not receive workers compensation benefits</labl>
@@ -2278,7 +2483,7 @@ This indicator variable is set to 1 if the individual was male and was created f
       <location width="9"/>
       <labl access="released">Weeks at a Job</labl>
       <txt>
-        <p>Total number of weeks that the respondent held a job in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe for panels 1984, 1990, 1991, 1992, 1993, 2001. Panels 1996 and 2008 go up to month 48 and panel 2004 goes up to month 36. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe.</p>
+        <p>Total number of weeks that the respondent held a job in month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The relevant SIPP variable is WKSJB (1984 panel), WKSJOB (1990, 1991, 1992, 1993), or RMWKWJB (1996, 2001, 2004, 2008). Values range from 0 to 5.</p>
       </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
@@ -2286,7 +2491,7 @@ This indicator variable is set to 1 if the individual was male and was created f
       <location width="9"/>
       <labl access="released">Weeks With Pay</labl>
       <txt>
-        <p>Total number of weeks worked with pay in month M. M represents the month number since the start of panel_1stfullyear. Only the first 24 months of the individual's SIPP panel are in universe for panels 1984, 1990, 1991, 1992, 1993, 2001. Panels 1996 and 2008 go up to month 48 and panel 2004 goes up to month 36. A later release of these data will add months after 24 for longer SIPP panels. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe.</p>
+        <p>Total number of weeks worked with pay in Month M of year Y. M goes from 1 to 12 and represents the calendar month. Y goes from 1 to 6 and represents the number calendar year for a given SIPP panel. Months that are outside the time frame covered by an individual's SIPP panel will always be missing and out of universe. The wkswp_Y_M variable is calculated by subtracting the weeks without pay in month M of year Y from wksjob_Y_M. The relevant SIPP variable for weeks without pay is WKSWOP (1984, 1990, 1991, 1992, and 1993 panels), or RMWKSAB (1996, 2001, 2004, 2008). Values range from 0 to 5.</p>
       </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
@@ -2319,13 +2524,17 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
     <var ID="Nl8jGisFEO22KnUR" access="released" dcml="0" files="F1 F2" name="year_bach">
       <location EndPos="73" StartPos="70" width="4"/>
       <labl access="released" xml-lang="en">Year of Bachelors Degree</labl>
-      <txt>This variable contains the year the respondent finished his/her bachelor's degree.  This information comes from the education history topical module, conducted in wave 2 of each panel.  Individuals must have educ_5cat=4 to be in scope for this variable.</txt>
+      <txt>
+        <p>This variable gives the year that post-high school education ended and comes from the Education and Training History topical module in wave 3 of the 1984 panel and wave 2 of the other SIPP panels. Individuals must have educ_5cat=4 or higher to be in-scope for this variable. The relevant variable is TM8036 for the 1984 panel; TM8434 for 1990, 1991, 1992, 1993; and TBACHYR for 1996, 2001, 2004, and 2008.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="yShOKO9zClYbvmND" access="released" dcml="0" files="F1 F2" name="year_beg_posths">
       <location EndPos="69" StartPos="66" width="4"/>
       <labl access="released" xml-lang="en">Year Began Post-HS Education</labl>
-      <txt>This variable gives the year that post-high school education began and comes from the wave 2 Education and Training History topical module (variable TM8420 for 1984, 1990-1993 panels; variable tcollstr for 1996-2008 panels).  This variable is in scope if educ_5cat is 3 or greater.</txt>
+      <txt>
+        <p>This variable gives the year that post-high school education ended and comes from the Education and Training History topical module in wave 3 of the 1984 panel and wave 2 of the 1990, 1991, 1992, 1993, 1996, 2001, 2004, and 2008 panels. The relevant SIPP variables are TM8420 for the 1984 and 1990-1993 panels and TCOLLSTR for the 1996, 2001, 2004, and 2008 panels. This variable is in scope if educ_5cat is 3 or greater.</p>
+      </txt>
       <catgry access="released" missing="Y">
         <catValu>Sysmiss - Structurally missing (educ_5cat=1 or educ_5cat=2)</catValu>
       </catgry>
@@ -2334,80 +2543,255 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
     <var ID="S7hdUfax6ch81aCn" access="released" dcml="0" files="F1 F2" name="year_end_hs">
       <location EndPos="65" StartPos="62" width="4"/>
       <labl access="released" xml-lang="en">Year Ended HS (or less) Education</labl>
-      <txt>This variable gives the year that high school education ended and comes from the wave 2 Education and Training History topical module (variable TM8404 and TM8412 for 1984, 1990-1993 panels; variable tlstschl and thsyr for 1996-2008 panels). This variable is in scope for all levels of educ_5cat.</txt>
+      <txt>
+        <p>This variable gives the year that post-high school education ended and comes from the Education and Training History topical module in wave 3 of the 1984 panel and wave 2 of the other SIPP panels. The relevant SIPP variables are TM8404 and TM8412 for 1984, 1990-1993 panels; variable TLSTSCHL and THSYR for 1996-2008 panels. This variable is in scope for all levels of educ_5cat.</p>
+      </txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="xluwVor6i93iyEdk" access="released" dcml="0" files="F1 F2" name="year_end_posths">
       <location EndPos="79" StartPos="76" width="4"/>
       <labl access="released" xml-lang="en">Year Ended Post-HS Education</labl>
-      <txt>This variable gives the year that post-high school education ended and comes from the wave 2 Education and Training History topical module (variables TM8426 and TM8440 for 1984, 1990-1993 panels; variables tlastcol, tvocyr, tassocyr, tbachyr, and tadvncyr for 1996-2008 panels). This variable is in scope if educ_5cat is 3 or greater.</txt>
+      <txt>
+        <p>This variable gives the year that post-high school education ended and comes from the Education and Training History topical module in wave 3 of the 1984 panel and wave 2 of the other SIPP panels. The relevant SIPP variables are TM8030 for 1984; TM8426 and TM8440 for the 1990-1993 panels; variables TLASTCOL, TVOCYR, TASSOCYR, TBACHYR, TADVNCYR for the 1996, 2001, 2004, and 2008 panels. This variable is in scope if educ_5cat is 3 or greater.</p>
+      </txt>
       <catgry access="released" missing="Y">
         <catValu>Sysmiss - Structurally missing (educ_5cat=1 or educ_5cat=2)</catValu>
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="v7V1" name="date_enter_sipp">
-            <labl>Wave Entered SIPP</labl>
-        </var>
-        <var ID="v7V2" name="mdy_lft_sipp">
-            <labl>Wave Left SIPP</labl>
-        </var>
-        <var ID="v7V3" name="panel_1styear">
-            <labl/>
-        </var>
-        <var ID="v7V4" name="flag_in_tmhist_ms">
-            <labl>Flag: In Marital History TM</labl>
-        </var>
-        <var ID="v7V5" name="first_birth_year">
-            <labl>Year of Birth of First Child</labl>
-        </var>
-        <var ID="v7V6" name="last_birth_year">
-            <labl>Year of Birth of Last Child</labl>
-        </var>
-        <var ID="v7V7" name="halfsamp">
-            <labl>Half Sample Code</labl>
-        </var>
-        <var ID="v7V8" name="varstrat">
-            <labl>Variance Stratum Code</labl>
-        </var>
-        <var ID="v7V9" name="mom_personid">
-            <labl>SIPP Gold Standard Person ID of Mom</labl>
-        </var>
-        <var ID="v7V10" name="ser_posearn_1951">
-            <labl>SER: Positive Earnings</labl>
-        </var>
-        <var ID="v7V11" name="mbr_ssdi_ben_dof">
-            <labl>MBR: date of filing for SSDI (benefit eventually received)</labl>
-        </var>
-        <var ID="v7V12" name="mbr_ssdi_deny_dof">
-            <labl>MBR: date of filing for SSDI (claim denied)</labl>
-        </var>
-        <var ID="v7V13" name="mbr_ssdi_bdof_app">
-            <labl>Application associated with date of filing</labl>
-        </var>
-        <var ID="v7V14" name="mbr_ssdi_ddof_app">
-            <labl>Application associated with date of filing (denied app)</labl>
-        </var>
-        <var ID="v7V15" name="flag_enter_late">
-            <labl/>
-        </var>
-        <var ID="v7V16" name="flag_lft_sipp">
-            <labl/>
-        </var>
-        <var ID="v7V17" name="life_ins_in_scope">
-            <labl/>
-        </var>
-        <var ID="v7V18" name="pension_in_scope_age">
-            <labl/>
-        </var>
-        <var ID="v7V19" name="fert_in_scope">
-            <labl/>
-        </var>
-        <var ID="v7V20" name="brthmn_sipp">
-            <labl/>
-        </var>
-        <var ID="v7V21" name="brthyr_sipp">
-            <labl/>
-        </var>
+    <var ID="v7V1" access="released" name="date_enter_sipp">
+      <labl>Wave Entered SIPP</labl>
+      <txt>
+        <p>Date of the wave when the respondent entered the SIPP.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V2" name="mdy_lft_sipp">
+      <labl>Wave Left SIPP</labl>
+      <txt>
+        <p>Month, day, and year that an individual left their SIPP household. Based on the SIPP variables U-DAYLFT and U-MONLFT (1984 panel); DAYLFT, MONLFT, YRLFT (1990, 1991, 1992, 1993); ULFTDAY and ULFTMON (1996). Exit date information not available for 2001, 2004, or 2008 panels.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V3" access="released" name="panel_1styear">
+      <labl>First calendar year of SIPP panel</labl>
+      <txt>
+        <p>The first calendar year of the panel. Note that several panels begin before their panel value (e.g. the 1996 panel starts at the end of 1995).</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V4" access="released" name="flag_in_tmhist_ms">
+      <labl>Flag: In Marital History TM</labl>
+      <txt>
+        <p>Indicates whether or not an individual participated in the marital history topical module. Based on having a non-missing value for the SIPP variable MS_1, MS_2, MS_3, MS_4 (1984 Panel); MS (1990,1991,1992,1993); or EMS (1996,2001,2004,2008).</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Not in the marital history topical module</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Present in the marital history topical module</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V5" access="released" name="first_birth_year">
+      <labl>Year of Birth of First Child</labl>
+      <txt>
+        <p>Birth year of first biological child. Derived from first_admin_birthdate and/or the birth year of first biological child indicated in the SIPP.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V6" access="released" name="last_birth_year">
+      <labl>Year of Birth of Last Child</labl>
+      <txt>
+        <p>Birth year of last-born biological child. Derived from the administrative birthdate of the last biological child and/or SIPP-reported birth year of the last-born biological child.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V7" access="released" name="halfsamp">
+      <labl>Half Sample Code</labl>
+      <txt>
+        <p>Half sample code for variance estimation. In the SIPP, the relevant variables is H1-HSC in the 1984 panel; HHSC in the 1990, 1991, 1992, and 1993 panels; and GHlFSAM for the 1996, 2001, 2004, and 2008 panels. The values are 1 or 2.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V8" access="released" name="varstrat">
+      <labl>Variance Stratum Code</labl>
+      <txt>
+        <p>Stratum code for variance estimation. In the SIPP, the relevant variable is H1-HSC for the 1984 panel; HHSC for the 1990, 1991, 1992, and 1993 panels; and GHLFSAM for the 1996, 2001, 2004, and 2008 panels. The values range from 0 to 99.</p>
+      </txt>
+    </var>
+    <var ID="v7V9" access="released" name="mom_personid">
+      <labl>SIPP Gold Standard Person ID of Mom</labl>
+      <txt>
+        <p>This variable identifies the personid of an individual's mother within each SSB implicate. In the SSB, the parent-child link between SIPP respondents denoted by personid and mom_personid has been synthesized so that family characteristics cannot be used as a blocking variable in a re-identification attack.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V10" access="released" name="ser_posearn_1951">
+      <labl>SER: Positive Earnings</labl>
+      <txt>
+        <p>A binary indicator for having positive earnings (based on the SER) in year YYYY.</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Did not have positive earnings in year YYYY</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Positive earnings in year YYYY</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V11" access="released" name="mbr_ssdi_ben_dof">
+      <labl>MBR: date of filing for SSDI (benefit eventually received)</labl>
+      <txt>
+        <p>Application date of most recent accepted OASDI application. The MBR has information on the OASDI application date of filing for the most recent accepted application and the most recent rejected application. To match with the SSDI application numbers (k = 1 to 4) in the SSB, the date of filing is compared to an individual's SSDI history and other dates associated with an application to assess if it matches one of these four applications.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V12" access="released" name="mbr_ssdi_deny_dof">
+      <labl>MBR: date of filing for SSDI (claim denied)</labl>
+      <txt>
+        <p>Application date of most recent rejected OASDI application. This variable pertains to the most recent rejected OASDI application. The MBR has information on the application date of filing for the most recent accepted application and most recent rejected application. To match with the SSDI application numbers (k = 1 to 4) in the SSB, the date of filing is compared to other dates associated with an application to assess if it matches one of these four applications.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V13" access="released" name="mbr_ssdi_bdof_app">
+      <labl>Application associated with date of filing</labl>
+      <txt>
+        <p>This variable provides the application number (k = 1 to 4) that matches with the date of filing for benefits. This variable pertains to mbr_ssdi_ben_dof. The MBR has information, when applicable, on the date of filing of the most recent accepted OASDI application and the date of filing for most recent rejected OASDI application. If an individual's SSDI history and one of their SSDI applications in the SSB aligns with the timing of the date of filing for the most recent accepted application, mbr_ssdi_bdof_app will indicate which application number k.</p>
+      </txt>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Date of filing fits with SSDI application 1</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Date of filing fits with SSDI application 2</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Date of filing fits with SSDI application 3</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>Date of filing fits with SSDI application 4</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V14" access="released" name="mbr_ssdi_ddof_app">
+      <labl>Application associated with date of filing (denied app)</labl>
+      <txt>
+        <p>This variable provides the application number (k = 1 to 4) that matches with the date of filing for benefits. This variable pertains to mbr_ssdi_deny_dof. The MBR has information on dates of filing for most recent accepted OASDI application and most recent rejected OASDI application. If one of the four SSDI applications included in the SSB aligns with the individual's SSDI history and the timing of an SSDI application, mbr_ssdi_ddof_app will indicate which application.</p>
+      </txt>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Date of filing fits with application 1</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Date of filing fits with application 2</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Date of filing fits with application 3</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>Date of filing fits with application 4</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V15" access="released" name="flag_enter_late">
+      <labl>Flag: Entered SIPP Late</labl>
+      <txt>
+        <p>A flag indicating if the respondent entered the SIPP after wave 1.</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Did not enter SIPP late</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Entered SIPP late</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V16" access="released" name="flag_lft_sipp">
+      <labl>Flag: Left Before End of SIPP</labl>
+      <txt>
+        <p>Indicator for individual in the SIPP who leave the survey. Variable is based on a positive value for U-REALFT (1984 Panel); REALFT (1990, 1991, 1992, 1993); ULFTMAIN (1996, 2001, 2004, 2008).</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Did not leave SIPP early</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Left SIPP early</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V17" access="released" name="life_ins_in_scope">
+      <labl>In-Scope for Life Insurance Topical Module</labl>
+      <txt>
+        <p>Indicator for being in-scope for the main life insurance topical module. This occurs in Wave 3 for the 1996, 2001, and 2004 SIPP panels and Wave 4 for the 1984, 1990, 1991, 1992, 1993, and 2008 panels.</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Out of scope</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>In-Scope</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V18" access="released" name="pension_in_scope_age">
+      <labl>In-Scope for Pension (Level I)</labl>
+      <txt>
+        <p>This variable indicates that an individual was in scope for the pension questions because he or she at least 15 years old at the time of the pension topical module. The pension topical module is conducted in the following waves by panel: wave 4 in the 1984 panel (TM8324); wave 4 in the 1990 and 1992 panels (TM8324); wave 7 in the 1991 panel (TM8324); wave 9 in the 1993 panel (TM8324); wave 7 in the 1996, 2001, and 2004 panels (EARPUNV, RMNJBBS); wave 3 in the 2008 panel (EARPUNV, RMNJBBS).</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Out of scope</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>In-Scope</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V19" access="released" name="fert_in_scope">
+      <labl>In-Scope for Fertility Topical Module</labl>
+      <txt>
+        <p>Indicator for being in-scope for the fertility topical module of the SIPP. The fertility topical module occurs in wave 8 of the 1984 panel; wave 2 of the 1990, 1991, 1992, 1993, 1996, 2001, 2004, and 2008 panels.</p>
+      </txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Not In-Scope</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>In-Scope</labl>
+      </catgry>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V20" access="released" name="brthmn_sipp">
+      <labl>Month of Birth - SIPP</labl>
+      <txt>
+        <p>Respondent's birth month, as given in SIPP. This date is used for universe determination for SIPP variables.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
+    <var ID="v7V21" access="released" name="brthyr_sipp">
+      <labl>Year of Birth - SIPP</labl>
+      <txt>
+        <p>Respondent's birth year, as given in SIPP. This date is used for universe determination for SIPP variables.</p>
+      </txt>
+      <concept>numeric</concept>
+    </var>
   </dataDscr>
 </codeBook>
