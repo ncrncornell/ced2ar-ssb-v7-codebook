@@ -233,12 +233,12 @@
       </relMat>
       <relMat>
         <p>Changes since v6:</p>
-        <p>- The calculation of "Total Usual Weekly Hours" has changed. It now relies solely on SIPP information. The variable name has therefore changed from<emph>tothours_M</emph>to<emph>totalhrs_Y_M</emph>.</p>
-        <p>- The following variables are new:<emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_1951, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp</emph>.</p>
-        <p>- The following variable roots have changed (<emph>oldvar_W</emph>-- newvar_W):<emph>occ_3cat</emph>-- occ_cat,<emph>ind_4cat</emph>-- ind_cat</p>
-        <p>- The following variables were removed:<emph>ind_exist, occ_exist, left_layoff_M</emph>
+        <p>- The calculation of "Total Usual Weekly Hours" has changed. It now relies solely on SIPP information. The variable name has therefore changed from <emph>tothours_M</emph> to <emph>totalhrs_Y_M</emph>.</p>
+        <p>- The following variables are new: <emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_1951, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp</emph>.</p>
+        <p>- The following variable roots have changed (<emph>oldvar_W</emph> &#8594;  newvar_W): <emph>occ_3cat</emph> &#8594; occ_cat, <emph>ind_4cat</emph> &#8594; ind_cat</p>
+        <p>- The following variables were removed: <emph>ind_exist, occ_exist, left_layoff_M</emph>
         </p>
-        <p>- The variable nomenclature based on months<emph>_M</emph>was changed to<emph>_Y_M</emph>- see more details elsewhere in this document.</p>
+        <p>- The variable nomenclature based on months <emph>_M</emph>was changed to <emph>_Y_M</emph>- see more details elsewhere in this document.</p>
       </relMat>
       <relStdy>
         <p>L. B. Reeder, M. Stinson, K. E. Trageser, and L. Vilhuber, "Codebook for the SIPP Synthetic Beta v5.1 [Codebook file]," {Cornell Institute for Social and Economic Research} and {Labor Dynamics Institute} [distributor]. Cornell University, Ithaca, NY, USA, DDI-C document , 2014. Available at<ExtLink URI="http://www2.ncrn.cornell.edu/ced2ar-web/codebooks/ssb/v/v51">http://www2.ncrn.cornell.edu/ced2ar-web/codebooks/ssb/v/v51</ExtLink>.</p>
