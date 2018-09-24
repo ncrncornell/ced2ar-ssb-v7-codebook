@@ -234,7 +234,7 @@
       <relMat>
         <p>Changes since v6:</p>
         <p>- The calculation of "Total Usual Weekly Hours" has changed. It now relies solely on SIPP information. The variable name has therefore changed from <emph>tothours_M</emph> to <emph>totalhrs_Y_M</emph>.</p>
-        <p>- The following variables are new: <emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_1951, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp,disab_worklimit_t, disab_nowork_t</emph>.</p>
+        <p>- The following variables are new: <emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_1951, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp, disab_worklimit_t, disab_nowork_t</emph>.</p>
         <p>- The following variable roots have changed (<emph>oldvar_W</emph> &#8594;  newvar_W): <emph>occ_3cat</emph> &#8594; occ_cat, <emph>ind_4cat</emph> &#8594; ind_cat</p>
         <p>- The following variables were removed:<emph>ind_exist, occ_exist, left_layoff_M, disab_worklimit, disab_nowork</emph> </p> 
         <p>- The variable nomenclature based on months <emph>_M</emph> was changed to <emph>_Y_M</emph>- see more details elsewhere in this document.</p>
@@ -555,7 +555,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </txt>
       <varFormat schema="other" type="numeric"/>
     </var>
-    <var ID="Bc2pal2IlVq5Dugw" access="released" dcml="0" files="F1 F2" name="disab_nowork">
+    <var ID="Bc2pal2IlVq5Dugw" access="released" dcml="0" files="F1 F2" name="disab_nowork_t">
       <location EndPos="15" StartPos="15" width="1"/>
       <labl access="released" xml-lang="en">Disability Prevents Work - (wave a or b)</labl>
       <txt>
@@ -572,7 +572,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="ZZW5DDh6mOQpmFLe" access="released" dcml="0" files="F1 F2" name="disab_worklimit">
+    <var ID="ZZW5DDh6mOQpmFLe" access="released" dcml="0" files="F1 F2" name="disab_worklimit_t">
       <location EndPos="14" StartPos="14" width="1"/>
       <labl access="released" xml-lang="en">Work Limiting Disability - (wave a or b)</labl>
       <txt>
