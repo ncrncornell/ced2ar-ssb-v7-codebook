@@ -5,7 +5,7 @@
       <titlStmt>
         <titl>SIPP Synthetic Beta v7</titl>
         <altTitl>SSBv7</altTitl>
-        <IDNo agency="DOI">TBD</IDNo>
+	<IDNo agency="DOI">10.5281/zenodo.1477086</IDNo>
       </titlStmt>
       <rspStmt>
         <AuthEnty affiliation="Cornell University">Virtual RDC</AuthEnty>
