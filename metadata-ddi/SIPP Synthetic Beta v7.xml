@@ -27,7 +27,7 @@
         <distDate date="2018">2018</distDate>
       </distStmt>
       <verStmt>
-        <version date="2018-09-24 09:57:58 (auto-generated)">2018-09-01</version>
+        <version date="2018-11-01 15:05:57 (auto-generated)">2018-09-01</version>
       </verStmt>
       <biblCit>
         <p>Lori B. Reeder and Jordan C Stanley and Lars Vilhuber. Codebook for the SIPP Synthetic Beta 7.0 [Codebook file]. Cornell Institute for Social and Economic Research and Labor Dynamics Institute [distributor]. Cornell University, Ithaca, NY, 2015</p>
@@ -233,11 +233,12 @@
       </relMat>
       <relMat>
         <p>Changes since v6:</p>
-        <p>- The calculation of "Total Usual Weekly Hours" has changed. It now relies solely on SIPP information. The variable name has therefore changed from <emph>tothours_M</emph> to <emph>totalhrs_Y_M</emph>.</p>
-        <p>- The following variables are new: <emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_1951, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp, disab_worklimit_t, disab_nowork_t</emph>.</p>
-        <p>- The following variable roots have changed (<emph>oldvar_W</emph> &#8594;  newvar_W): <emph>occ_3cat</emph> &#8594; occ_cat, <emph>ind_4cat</emph> &#8594; ind_cat</p>
-        <p>- The following variables were removed:<emph>ind_exist, occ_exist, left_layoff_M, disab_worklimit, disab_nowork</emph> </p> 
-        <p>- The variable nomenclature based on months <emph>_M</emph> was changed to <emph>_Y_M</emph>- see more details elsewhere in this document.</p>
+        <p>- The calculation of "Total Usual Weekly Hours" has changed. It now relies solely on SIPP information. The variable name has therefore changed from<emph>tothours_M</emph>to<emph>totalhrs_Y_M</emph>.</p>
+        <p>- The following variables are new:<emph>date_enter_sipp, mdy_lft_sipp, panel_1styear, flag_in_tmhist_ms, first_birth_year, last_birth_year, halfsamp, varstrat, mom_personid, ser_posearn_YYYY, mbr_ssdi_ben_dof, mbr_ssdi_deny_dof, mbr_ssdi_bdof_app, mbr_ssdi_ddof_app, flag_enter_late, flag_lft_sipp, life_ins_in_scope, pension_in_scope_age, fert_in_scope, brthmn_sipp, brthyr_sipp, disab_worklimit_t, disab_nowork_t</emph>.</p>
+        <p>- The following variable roots have changed (<emph>oldvar_W</emph>ind_cat</p>
+        <p>- The following variables were removed:<emph>ind_exist, occ_exist, left_layoff_M, disab_worklimit, disab_nowork</emph>
+        </p>
+        <p>- The variable nomenclature based on months<emph>_M</emph>was changed to<emph>_Y_M</emph>- see more details elsewhere in this document.</p>
       </relMat>
       <relStdy>
         <p>L. B. Reeder, M. Stinson, K. E. Trageser, and L. Vilhuber, "Codebook for the SIPP Synthetic Beta v5.1 [Codebook file]," {Cornell Institute for Social and Economic Research} and {Labor Dynamics Institute} [distributor]. Cornell University, Ithaca, NY, USA, DDI-C document , 2014. Available at<ExtLink URI="http://www2.ncrn.cornell.edu/ced2ar-web/codebooks/ssb/v/v51">http://www2.ncrn.cornell.edu/ced2ar-web/codebooks/ssb/v/v51</ExtLink>.</p>
@@ -559,7 +560,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       <location EndPos="15" StartPos="15" width="1"/>
       <labl access="released" xml-lang="en">Disability Prevents Work - (wave a or b)</labl>
       <txt>
-        <p>This variable indicates that a person had a work-preventing disability. If an individual indicates a work-preventing disability in wave 2, disab_nowork_a = 1. In all panels but 1984, this question is asked again in a later wave: individuals indicating a work-preventing disability in that question have disab_nowork_b = 1. The universe is all individuals who were at least age 15, no older than age 70 by the end of the panel, and answered "yes" to having a work-limiting disability. The relevant SIPP variable for disab_nowork_a is TM8332 for the 1990-1993 panels and eprevwk for the 1996, 2001, 2004, and 2008 panels. For disab_nowork_b, the relevant SIPP variable is TM8924 in the topical module for the 1990-1993 panels and edisprev in the core of the 1996, 2001, 2004, and 2008 panels. The variable comes from wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008.</p>
+        <p>This variable indicates that a person had a work-preventing disability at time t where t = a (earlier wave) or b (later wave). If an individual indicates a work-preventing disability in wave 2, disab_nowork_a = 1. In all panels but 1984, this question is asked again in a later wave: individuals indicating a work-preventing disability in that question have disab_nowork_b = 1. The universe is all individuals who were at least age 15, no older than age 70 by the end of the panel, and answered "yes" to having a work-limiting disability. The relevant SIPP variable for disab_nowork_a is TM8332 for the 1990-1993 panels and eprevwk for the 1996, 2001, 2004, and 2008 panels. For disab_nowork_b, the relevant SIPP variable is TM8924 in the topical module for the 1990-1993 panels and edisprev in the core of the 1996, 2001, 2004, and 2008 panels. The variable comes from wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008.</p>
         <p/>
       </txt>
       <catgry access="released">
@@ -576,7 +577,7 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       <location EndPos="14" StartPos="14" width="1"/>
       <labl access="released" xml-lang="en">Work Limiting Disability - (wave a or b)</labl>
       <txt>
-        <p>This variable indicates that a person had a work-limiting disability. The information for wave a always comes from the disability topical module in wave 2. If an individual indicates a work-limiting disability in wave 2, disab_worklimit_a = 1. In all panels but 1984, this question is asked again in a later wave. The wave 2 topical module variable that informs disab_worklimit_a is TM8452 in the 1984 panel, TM8306 in the 1990, 1991, 1992, and 1993 panels, and ELMTVER in the 1996, 2001, 2004, and 2008 panels. Individuals asked this question are aged 16 to 67 except in 1984 where the age universe extends to age 72. The respective SIPP variables that inform disab_worklimit_b are TM8918 and TM8920 (in the topical module) for 1990, 1991, 1992, and 1993 panels and EDISABL (in the core) for 1996, 2001, 2004, and 2008 panels. The relevant variable can be found in wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008. The universe for this variable is all individuals who were at least age 15 and no older than age 70 by the end of the panel.</p>
+        <p>This variable indicates that a person had a work-limiting disability at time t where t = a (earlier wave) or b (later wave). The information for wave a always comes from the disability topical module in wave 2. If an individual indicates a work-limiting disability in wave 2, disab_worklimit_a = 1. In all panels but 1984, this question is asked again in a later wave. The wave 2 topical module variable that informs disab_worklimit_a is TM8452 in the 1984 panel, TM8306 in the 1990, 1991, 1992, and 1993 panels, and ELMTVER in the 1996, 2001, 2004, and 2008 panels. Individuals asked this question are aged 16 to 67 except in 1984 where the age universe extends to age 72. The respective SIPP variables that inform disab_worklimit_b are TM8918 and TM8920 (in the topical module) for 1990, 1991, 1992, and 1993 panels and EDISABL (in the core) for 1996, 2001, 2004, and 2008 panels. The relevant variable can be found in wave 3 for 1990, 1991, and 1993; wave 5 for 1996, 2001, and 2004; and wave 6 for 1992 and 2008. The universe for this variable is all individuals who were at least age 15 and no older than age 70 by the end of the panel.</p>
       </txt>
       <catgry access="released">
         <catValu>0</catValu>
@@ -2287,7 +2288,7 @@ The marital history topical module asks about a person's first and second marria
         <range UNITS="REAL" access="released" max="10" min="1"/>
       </valrng>
       <txt>
-        <p>This variable gives the year block when a respondent immigrated in the United States and is in-scope when foreign_born=1. The year of arrival to the U.S. is from the migration history wave 2 topical module (TM8736 for 1984, 1990-1993; emoveus for 1996, 2001, 2004, and 2008). Year blocks are generally five years but are as wide as 9 years and as short as 2 years. Categories are: 1=1959 or earlier; 2=1960-1964; 3=1965-1969; 4=1970-1974; 5=1974-1979; 6=1980-1981; 7=1982-1984; 8=1985-1993; 9=1994-1999; 10=2000-2004; 11=2005-2009; 12=2010-2014</p>
+        <p>This variable gives the year block when a respondent immigrated in the United States and is in-scope when foreign_born=1. The year of arrival to the U.S. is from the migration history wave 2 topical module (TM8736 for 1984, 1990-1993; emoveus for 1996, 2001, 2004, and 2008). Year blocks are generally five years but are as wide as 9 years and as short as 2 years. Categories are: 1=1959 or earlier; 2=1960-1964; 3=1965-1969; 4=1970-1974; 5=1974-1979; 6=1980-1981; 7=1982-1984; 8=1985-1993; 9=1994-1999; 10=2000-2004; 11=2005-2009; 12=2010-2014.</p>
       </txt>
       <catgry access="released">
         <catValu>1</catValu>
