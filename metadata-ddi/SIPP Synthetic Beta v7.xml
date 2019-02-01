@@ -5,7 +5,7 @@
       <titlStmt>
         <titl>SIPP Synthetic Beta v7</titl>
         <altTitl>SSBv7</altTitl>
-	<IDNo agency="DOI">10.5281/zenodo.1477086</IDNo>
+        <IDNo agency="DOI">10.5281/zenodo.1477086</IDNo>
       </titlStmt>
       <rspStmt>
         <AuthEnty affiliation="Cornell University">Virtual RDC</AuthEnty>
@@ -27,7 +27,7 @@
         <distDate date="2018">2018</distDate>
       </distStmt>
       <verStmt>
-        <version date="2018-11-01 15:05:57 (auto-generated)">2018-09-01</version>
+        <version date="2018-11-02 15:55:02 (upload date)">2018-09-01</version>
       </verStmt>
       <biblCit>
         <p>Lori B. Reeder and Jordan C Stanley and Lars Vilhuber. Codebook for the SIPP Synthetic Beta 7.0 [Codebook file]. Cornell Institute for Social and Economic Research and Labor Dynamics Institute [distributor]. Cornell University, Ithaca, NY, 2018</p>
@@ -274,7 +274,7 @@
     </fileTxt>
   </fileDscr>
   <dataDscr>
-    <varGrp ID="_demographic_variables" name="Demographic Variables" var="NXQrO4IWCYXUdFTi vVMquYOzJJ7u4w6q nZmmPK0lXzVEUSYD yztHoJssJsCPS5x2 qSB7jOmJS9ZdFn4V DwezqNHjv9HYCnv7 qCqE8v3YmlFDucPj JCHj9sljWcBszEOk Prkd72rzeaNaGsqa HXKJfzydFldFMP05 o8NfM0U7G53kNDoG" xml-lang="xml-lang339">
+    <varGrp ID="_demographic_variables" name="Demographic Variables" var="NXQrO4IWCYXUdFTi vVMquYOzJJ7u4w6q nZmmPK0lXzVEUSYD  qSB7jOmJS9ZdFn4V DwezqNHjv9HYCnv7  JCHj9sljWcBszEOk Prkd72rzeaNaGsqa HXKJfzydFldFMP05 o8NfM0U7G53kNDoG" xml-lang="xml-lang339">
       <labl>Demographic Variables</labl>
       <txt>The variables in this section are all drawn from the SIPP and represent demographic information gathered by the survey at a specific point in time.  Entries for individual variables describe the exact SIPP source variable and the reference point in time.</txt>
     </varGrp>
@@ -358,7 +358,7 @@
     </varGrp>
     <varGrp ID="_irs_ssa" name="IRS/SSA Variables" xml-lang="xml-lang339">
       <labl>IRS/SSA Variables</labl>
-      <txt>The Census Bureau sent a list of validated SSNs from the seven included SIPP panels to SSA and extracts from the Master Earnings File (Summary and Detailed Earnings Records), Master Beneficiary Record, Supplemental Security Record, 831 Disability File, and Payment History Update System were created.  The variables from these files that are included in the SSB are described below.  
+      <txt>The Census Bureau sent a list of validated SSNs from the seven included SIPP panels to SSA and extracts from the Master Earnings File (Summary and Detailed Earnings Records), Master Beneficiary Record, Supplemental Security Record, 831 Disability File, and Payment History Update System were created.  The variables from these files that are included in the SSB are described below.
 
                 Not  all SIPP respondents have linkages to SSA/IRS administrative data, including:  those who refused to provide their SSN; those whose SSNs were not validated; and those with valid SSNs who never worked, and never applied for benefits or received benefits.  In the Gold Standard, individuals without a validated SSN or without SSA/IRS administrative records had missing data for all SSA/IRS-derived variables described below.  Among these people, those respondents without a validated SSN had all administrative data imputed as part of the data completion  process.  Hence in the completed Gold Standard and the synthetic data, only individuals with no work or benefit history have zero earnings and missing benefits.</txt>
     </varGrp>
@@ -370,7 +370,7 @@
       <labl>Summary Earnings Record Variables</labl>
       <txt>The SSA/IRS Summary Earnings Records (SER) contain historical person-level earnings data.  In addition to an array of annual FICA-taxed earnings (1951-2006) that are capped at the FICA taxable maximum, the SER provides information regarding quarters of covered work.  Quarters of covered work are utilized by SSA to determine eligibility for participation in its old age, survivors, and disability insurance (OASDI) programs. Variables are in array form, i.e., in the form VARNAME_YYYY where YYYY is the year the variable refers to.</txt>
     </varGrp>
-    <varGrp ID="_fertility" name="Fertility Variables" var="yztHoJssJsCPS5x2 qCqE8v3YmlFDucPj Prkd72rzeaNaGsqa" xml-lang="xml-lang339">
+    <varGrp ID="_fertility" name="Fertility Variables" var="  Prkd72rzeaNaGsqa" xml-lang="xml-lang339">
       <labl>Fertility Variables</labl>
       <txt>Number of children and dates of birth.</txt>
     </varGrp>
@@ -718,12 +718,6 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
-    <var ID="yztHoJssJsCPS5x2" access="released" dcml="13" files="F1 F2" name="first_admin_birthdate">
-      <location EndPos="189" StartPos="171" width="19"/>
-      <labl access="released">Administrative birthdate of first born child</labl>
-      <txt>This variable contains the administrative birthdate for the first biological child.  The universe for this variable is all women between the ages of 15 and 65 at the time of the fertility history topical module.  This variable was created by first looking for biological children on the SIPP household roster and choosing the birthdate of the oldest child (if no children were found, the value was set to missing).  The total number of biological children reported on the roster (could possibly be zero) was then compared to the woman's report in her fertility history about the number of children born to her. If the number born to her was larger, first_admin_birthdate was set to missing and imputed using the woman's report of the first year she gave birth as a predictor variable. This process allowed us to create a fertility history that was consistent with the children reported on the roster and their administrative birthdates but still handle cases where older children or all children lived outside the household.</txt>
-      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
-    </var>
     <var ID="nZmmPK0lXzVEUSYD" access="released" dcml="0" files="F1 F2" name="flag_deathdate_exist">
       <location EndPos="6" StartPos="6" width="1"/>
       <labl access="released" xml-lang="en">Flag: Existence of Date of Death</labl>
@@ -975,12 +969,6 @@ The marital history topical module asks about a person's first and second marria
       <location EndPos="133" StartPos="116" width="18"/>
       <labl access="released">Initial SIPP Weight</labl>
       <txt>INITWGT contains the base survey weight for the sample unit to which the sample person belongs. This base survey weight is the inverse of the probability of selection for the sample unit, adjusted only for unit non-response and, in rare instances, for sampled units that turned out to represent more than one separate residence. Unlike final panel and calendar year weights, INITWGT includes no adjustment for attrition of households from SIPP panels and are not adjusted at the person level to match any external controls.  SSB users can utilize the weights to produce estimates that account for idiosyncratic probability of selection of sample units and for unit-nonresponse. Estimates for each SIPP panel, using these weights, become representative of the U.S. non-instutionalized population as of the beginning of the panel. For instance, using INITWGT, the distribution of calendar year 2010 administrative earnings for sample persons in the SSB from the 1984 SIPP panel would be representative of the U.S. population as of calendar year 1984.</txt>
-      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
-    </var>
-    <var ID="qCqE8v3YmlFDucPj" access="released" dcml="13" files="F1 F2" name="last_admin_birthdate">
-      <location EndPos="208" StartPos="190" width="19"/>
-      <labl access="released">Administrative birthdate of last born child</labl>
-      <txt>This variable contains the administrative birthdate for the last biological child. The universe for this variable is all women between the ages of 15 and 65 at the time of the fertility history topical module. This variable was created by first looking for biological children on the SIPP household roster and choosing the birthdate of the youngest child (if no children were found, the value was set to missing). The total number of biological children reported on the roster (could possibly be zero) was then compared to the woman's report in her fertility history about the number of children born to her. If the number born to her was larger, last_admin_birthdate was set to missing and imputed using the woman's report of the last year she gave birth as a predictor variable. This process allowed us to create a fertility history that was consistent with the children reported on the roster and their administrative birthdates but still handle cases where older children or all children lived outside the household.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="lJFN1PltOyO9elMn" access="released" dcml="0" files="F1 F2" name="layoff_Y_M">
