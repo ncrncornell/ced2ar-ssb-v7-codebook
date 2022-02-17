@@ -3,8 +3,8 @@
   <docDscr>
     <citation>
       <titlStmt>
-        <titl>SIPP Synthetic Beta v7</titl>
-        <altTitl>SSBv7</altTitl>
+        <titl>SIPP Synthetic Beta v7.0.1</titl>
+        <altTitl>SSBv701</altTitl>
         <IDNo agency="DOI">10.5281/zenodo.1477086</IDNo>
       </titlStmt>
       <rspStmt>
@@ -13,7 +13,7 @@
       <prodStmt>
         <producer abbr="Cornell NCRN Project">Cornell NSF-Census Research Network</producer>
         <copyright>Cornell NCRN Project</copyright>
-        <prodDate date="1 Sept 2018">1 September 2018</prodDate>
+        <prodDate date="17 Feb 2022">17 February 2022</prodDate>
         <prodPlac>Cornell Institute for Social and Economic Research (CISER), Cornell University, Ithaca NY<ExtLink URI="http://ciser.cornell.edu"/>
         </prodPlac>
         <software>The Comprehensive Extensible Data Documentation and Access Repository 2.9.0</software>
@@ -27,7 +27,7 @@
         <distDate date="2018">2018</distDate>
       </distStmt>
       <verStmt>
-        <version date="2018-11-02 15:55:02 (upload date)">2018-09-01</version>
+        <version date="2022-02-17 15:55:02 (upload date)">2022-02-17</version>
       </verStmt>
       <biblCit>
         <p>Lori B. Reeder and Jordan C Stanley and Lars Vilhuber. Codebook for the SIPP Synthetic Beta 7.0 [Codebook file]. Cornell Institute for Social and Economic Research and Labor Dynamics Institute [distributor]. Cornell University, Ithaca, NY, 2018</p>
@@ -35,8 +35,8 @@
     </citation>
     <docSrc>
       <titlStmt>
-        <titl>SSB_codebook_v7-0-beta</titl>
-        <altTitl>SSBv7</altTitl>
+        <titl>SSB_codebook_v7-0-1-beta</titl>
+        <altTitl>SSBv701</altTitl>
       </titlStmt>
     </docSrc>
   </docDscr>
@@ -44,7 +44,7 @@
     <citation>
       <titlStmt>
         <titl>SSB_codebook_v7-0-beta</titl>
-        <IDNo>6.0</IDNo>
+        <IDNo>7.0</IDNo>
       </titlStmt>
       <rspStmt>
         <AuthEnty>United States Department of Commerce. Bureau of the Census.</AuthEnty>
@@ -274,7 +274,7 @@
     </fileTxt>
   </fileDscr>
   <dataDscr>
-    <varGrp ID="_demographic_variables" name="Demographic Variables" var="NXQrO4IWCYXUdFTi vVMquYOzJJ7u4w6q nZmmPK0lXzVEUSYD  qSB7jOmJS9ZdFn4V DwezqNHjv9HYCnv7  JCHj9sljWcBszEOk Prkd72rzeaNaGsqa HXKJfzydFldFMP05 o8NfM0U7G53kNDoG" xml-lang="xml-lang339">
+    <varGrp ID="_demographic_variables" name="Demographic Variables" var="NXQrO4IWCYXUdFTi vVMquYOzJJ7u4w6q nZmmPK0lXzVEUSYD yztHoJssJsCPS5x2 qSB7jOmJS9ZdFn4V DwezqNHjv9HYCnv7 qCqE8v3YmlFDucPj JCHj9sljWcBszEOk Prkd72rzeaNaGsqa HXKJfzydFldFMP05 o8NfM0U7G53kNDoG" xml-lang="xml-lang339">
       <labl>Demographic Variables</labl>
       <txt>The variables in this section are all drawn from the SIPP and represent demographic information gathered by the survey at a specific point in time.  Entries for individual variables describe the exact SIPP source variable and the reference point in time.</txt>
     </varGrp>
@@ -358,7 +358,7 @@
     </varGrp>
     <varGrp ID="_irs_ssa" name="IRS/SSA Variables" xml-lang="xml-lang339">
       <labl>IRS/SSA Variables</labl>
-      <txt>The Census Bureau sent a list of validated SSNs from the seven included SIPP panels to SSA and extracts from the Master Earnings File (Summary and Detailed Earnings Records), Master Beneficiary Record, Supplemental Security Record, 831 Disability File, and Payment History Update System were created.  The variables from these files that are included in the SSB are described below.
+      <txt>The Census Bureau sent a list of validated SSNs from the seven included SIPP panels to SSA and extracts from the Master Earnings File (Summary and Detailed Earnings Records), Master Beneficiary Record, Supplemental Security Record, 831 Disability File, and Payment History Update System were created.  The variables from these files that are included in the SSB are described below.  
 
                 Not  all SIPP respondents have linkages to SSA/IRS administrative data, including:  those who refused to provide their SSN; those whose SSNs were not validated; and those with valid SSNs who never worked, and never applied for benefits or received benefits.  In the Gold Standard, individuals without a validated SSN or without SSA/IRS administrative records had missing data for all SSA/IRS-derived variables described below.  Among these people, those respondents without a validated SSN had all administrative data imputed as part of the data completion  process.  Hence in the completed Gold Standard and the synthetic data, only individuals with no work or benefit history have zero earnings and missing benefits.</txt>
     </varGrp>
@@ -370,7 +370,7 @@
       <labl>Summary Earnings Record Variables</labl>
       <txt>The SSA/IRS Summary Earnings Records (SER) contain historical person-level earnings data.  In addition to an array of annual FICA-taxed earnings (1951-2006) that are capped at the FICA taxable maximum, the SER provides information regarding quarters of covered work.  Quarters of covered work are utilized by SSA to determine eligibility for participation in its old age, survivors, and disability insurance (OASDI) programs. Variables are in array form, i.e., in the form VARNAME_YYYY where YYYY is the year the variable refers to.</txt>
     </varGrp>
-    <varGrp ID="_fertility" name="Fertility Variables" var="  Prkd72rzeaNaGsqa" xml-lang="xml-lang339">
+    <varGrp ID="_fertility" name="Fertility Variables" var="yztHoJssJsCPS5x2 qCqE8v3YmlFDucPj Prkd72rzeaNaGsqa" xml-lang="xml-lang339">
       <labl>Fertility Variables</labl>
       <txt>Number of children and dates of birth.</txt>
     </varGrp>
@@ -718,6 +718,12 @@ Education variables come from the following waves, by panel: Wave 3 in 1984 (det
       </catgry>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
+    <var ID="yztHoJssJsCPS5x2" access="released" dcml="13" files="F1 F2" name="first_admin_birthdate">
+      <location EndPos="189" StartPos="171" width="19"/>
+      <labl access="released">Administrative birthdate of first born child</labl>
+      <txt>This variable contains the administrative birthdate for the first biological child.  The universe for this variable is all women between the ages of 15 and 65 at the time of the fertility history topical module.  This variable was created by first looking for biological children on the SIPP household roster and choosing the birthdate of the oldest child (if no children were found, the value was set to missing).  The total number of biological children reported on the roster (could possibly be zero) was then compared to the woman's report in her fertility history about the number of children born to her. If the number born to her was larger, first_admin_birthdate was set to missing and imputed using the woman's report of the first year she gave birth as a predictor variable. This process allowed us to create a fertility history that was consistent with the children reported on the roster and their administrative birthdates but still handle cases where older children or all children lived outside the household.</txt>
+      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
+    </var>
     <var ID="nZmmPK0lXzVEUSYD" access="released" dcml="0" files="F1 F2" name="flag_deathdate_exist">
       <location EndPos="6" StartPos="6" width="1"/>
       <labl access="released" xml-lang="en">Flag: Existence of Date of Death</labl>
@@ -895,71 +901,71 @@ The marital history topical module asks about a person's first and second marria
         <catValu>4</catValu>
         <labl>Manufacturing</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>5</catValu>
         <labl>Wholesale Trade</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>6</catValu>
         <labl>Resale Trade</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>7</catValu>
         <labl>Transportation and Warehousing</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>8</catValu>
         <labl>Utilities</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>9</catValu>
         <labl>Information</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>10</catValu>
         <labl>Finance and Insurance</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>11</catValu>
         <labl>Real Estate, Rental of Goods</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>12</catValu>
         <labl>Professional, Scientific, and Technical Services</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>13</catValu>
         <labl>Management of companies/enterprises</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>14</catValu>
         <labl>Administrative, support, waste management services</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>15</catValu>
         <labl>Educational Services</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>16</catValu>
         <labl>Health Care and Social Assistance</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>17</catValu>
         <labl>Arts, Entertainment, and Recreation</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>18</catValu>
         <labl>Accommodation and Food Services</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>19</catValu>
         <labl>Other Services, except public domain</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>20</catValu>
         <labl>Public Administration</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>21</catValu>
         <labl>Military (specifically, last or present job was or is in the armed forces)</labl>
       </catgry>
@@ -969,6 +975,12 @@ The marital history topical module asks about a person's first and second marria
       <location EndPos="133" StartPos="116" width="18"/>
       <labl access="released">Initial SIPP Weight</labl>
       <txt>INITWGT contains the base survey weight for the sample unit to which the sample person belongs. This base survey weight is the inverse of the probability of selection for the sample unit, adjusted only for unit non-response and, in rare instances, for sampled units that turned out to represent more than one separate residence. Unlike final panel and calendar year weights, INITWGT includes no adjustment for attrition of households from SIPP panels and are not adjusted at the person level to match any external controls.  SSB users can utilize the weights to produce estimates that account for idiosyncratic probability of selection of sample units and for unit-nonresponse. Estimates for each SIPP panel, using these weights, become representative of the U.S. non-instutionalized population as of the beginning of the panel. For instance, using INITWGT, the distribution of calendar year 2010 administrative earnings for sample persons in the SSB from the 1984 SIPP panel would be representative of the U.S. population as of calendar year 1984.</txt>
+      <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
+    </var>
+    <var ID="qCqE8v3YmlFDucPj" access="released" dcml="13" files="F1 F2" name="last_admin_birthdate">
+      <location EndPos="208" StartPos="190" width="19"/>
+      <labl access="released">Administrative birthdate of last born child</labl>
+      <txt>This variable contains the administrative birthdate for the last biological child. The universe for this variable is all women between the ages of 15 and 65 at the time of the fertility history topical module. This variable was created by first looking for biological children on the SIPP household roster and choosing the birthdate of the youngest child (if no children were found, the value was set to missing). The total number of biological children reported on the roster (could possibly be zero) was then compared to the woman's report in her fertility history about the number of children born to her. If the number born to her was larger, last_admin_birthdate was set to missing and imputed using the woman's report of the last year she gave birth as a predictor variable. This process allowed us to create a fertility history that was consistent with the children reported on the roster and their administrative birthdates but still handle cases where older children or all children lived outside the household.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="lJFN1PltOyO9elMn" access="released" dcml="0" files="F1 F2" name="layoff_Y_M">
@@ -1045,8 +1057,8 @@ The marital history topical module asks about a person's first and second marria
     <var ID="sBiDVksbzBmIKeAo" access="released" dcml="14" files="F1 F2" intrvl="contin" name="mbr_agedsp_benefit_totamt">
       <location EndPos="430" StartPos="413" width="18"/>
       <labl access="released">MBR: total monthly benefit</labl>
-      <txt>Total monthly amount of benefits received at beginning of aged spouse
-        benefit entitlement. In most cases this amount is from the same month as
+      <txt>Total monthly amount of benefits that an individual was eligible for at the beginning of aged spouse benefit entitlement. 
+        In most cases this amount is from the same month as
         in MBR_agedsp_benefit_stdate. However, if data for that month were
         missing in the MBR extract, we searched through the monthly benefit array
         to find the first positive value. This amount can be a combination of
@@ -1076,7 +1088,7 @@ The marital history topical module asks about a person's first and second marria
     <var ID="NNeF7jc5z9ydG5uG" access="released" dcml="13" files="F1 F2" name="mbr_retire_benefit_totamt">
       <location EndPos="358" StartPos="341" width="18"/>
       <labl access="released" xml-lang="en">MBR: total monthly benefit</labl>
-      <txt>This variable provides the monthly amount of retirement benefits received by the individual.  Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME).  See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed.  This benefit amount is the total amount paid in the first month of own retirement benefits receipt. If the respondent was dually entitled in this month, this benefit amount reflects the total payment made (i.e. the sum of the amounts due to each type of benefit). For example if a person received own and aged spouse retirement benefits, this benefit amount would be the sum of those two benefits.</txt>
+      <txt>This variable provides the monthly amount of retirement benefits for which an individual is eligible.   Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME).  See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed.  This benefit amount is the total amount paid in the first month of own retirement benefits receipt. If the respondent was dually entitled in this month, this benefit amount reflects the total payment made (i.e. the sum of the amounts due to each type of benefit). For example if a person received own and aged spouse retirement benefits, this benefit amount would be the sum of those two benefits.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="ZJtVOnb3S1HWVEE1" access="released" dcml="0" files="F1 F2" name="mbr_ssdi_applied_k">
@@ -1098,7 +1110,7 @@ The marital history topical module asks about a person's first and second marria
     <var ID="tvzUDt7N6by7grsu" access="released" dcml="12" files="F1 F2" name="mbr_ssdi_benefit_totamt_k">
       <location EndPos="684" StartPos="667" width="18"/>
       <labl access="released" xml-lang="en">MBR SSDI: Benefit amount</labl>
-      <txt>This variable provides the monthly amount of SSDI benefits received by the individual for each of four applications. See mbr_ssdi_applied_k for details on how individual applications are recorded on this file. Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME). See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed. This benefit amount is the total amount paid in the first month of disability benefits receipt.</txt>
+      <txt>This variable provides the monthly amount of SSDI benefits for which the individual was eligible on each of four applications.  See mbr_ssdi_applied_k for details on how individual applications are recorded on this file. Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME). See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed. This benefit amount is the total amount paid in the first month of disability benefits receipt.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="Fkqk0qZah5AVBY5c" access="released" dcml="0" files="F1 F2" name="mbr_ssdi_ceased_k">
@@ -1240,7 +1252,7 @@ The marital history topical module asks about a person's first and second marria
     <var ID="VA1VZ6EFy6dsPXZo" access="released" dcml="13" files="F1 F2" name="mbr_widowsp_benefit_totamt">
       <location EndPos="502" StartPos="485" width="18"/>
       <labl access="released" xml-lang="en">MBR: total monthly benefit</labl>
-      <txt>This variable provides the monthly amount of widowed spouse benefits received by the individual. Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME). See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed. This benefit amount is the total amount paid in the first month of widowed spouse benefits receipt. If the respondent was dually entitled in this month, this benefit amount reflects the total payment made (i.e. the sum of the amounts due to each type of benefit). For example if a person received own and widowed spouse retirement benefits, this benefit amount would be the sum of those two benefits.</txt>
+      <txt>This variable provides the monthly amount of widowed spouse benefits for which an individual was eligible. Benefit amounts are calculated based on the worker's average indexed monthly earnings (AIME). See the Social Security Annual Statistical Supplement for details on how benefit calculations are performed. This benefit amount is the total amount paid in the first month of widowed spouse benefits receipt. If the respondent was dually entitled in this month, this benefit amount reflects the total payment made (i.e. the sum of the amounts due to each type of benefit). For example if a person received own and widowed spouse retirement benefits, this benefit amount would be the sum of those two benefits.</txt>
       <varFormat formatname="Double" schema="other" type="numeric">%12.0g</varFormat>
     </var>
     <var ID="V8" access="released" dcml="0" files="F1 F2" intrvl="discrete" name="mh1" xml-lang="xml-lang339">
@@ -1519,89 +1531,89 @@ The marital history topical module asks about a person's first and second marria
       </catgry>
       <catgry access="released">
         <catValu>3</catValu>
-        <labl>Business and financial operations</labl>
+        <labl>Computer and math</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>4</catValu>
         <labl>Architecture and engineering</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>5</catValu>
         <labl>Life, physical, and social science</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>6</catValu>
         <labl>Community and social service</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>7</catValu>
         <labl>Legal</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>8</catValu>
         <labl>Education, training, and libraries</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>9</catValu>
         <labl>Arts, design, entertainment, sports, and media</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>10</catValu>
         <labl>Healthcare practitioner and technical</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>11</catValu>
         <labl>Healthcare support</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>12</catValu>
         <labl>Protective service</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>13</catValu>
         <labl>Food prep and service</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>14</catValu>
         <labl>Building and grounds cleaning and maintenance</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>15</catValu>
         <labl>Personal care and service</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>16</catValu>
         <labl>Sales</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>17</catValu>
         <labl>Office and administrative support</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>18</catValu>
         <labl>Farming, fishing, and forestry</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>19</catValu>
         <labl>Construction and extraction</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>20</catValu>
         <labl>Installation, maintenance, and repairs</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>21</catValu>
         <labl>Production</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>22</catValu>
         <labl>Transportation</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>23</catValu>
         <labl>Material moving</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>24</catValu>
         <labl>Military</labl>
       </catgry>
@@ -2534,11 +2546,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>Indicates whether or not an individual participated in the marital history topical module. Based on having a non-missing value for the SIPP variable MS_1, MS_2, MS_3, MS_4 (1984 Panel); MS (1990,1991,1992,1993); or EMS (1996,2001,2004,2008).</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Not in the marital history topical module</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Present in the marital history topical module</labl>
       </catgry>
@@ -2583,11 +2595,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>A binary indicator for having positive earnings (based on the SER) in year YYYY.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not have positive earnings in year YYYY</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Positive earnings in year YYYY</labl>
       </catgry>
@@ -2612,19 +2624,19 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>This variable provides the application number (k = 1 to 4) that matches with the date of filing for benefits. This variable pertains to mbr_ssdi_ben_dof. The MBR has information, when applicable, on the date of filing of the most recent accepted OASDI application and the date of filing for most recent rejected OASDI application. If an individual's SSDI history and one of their SSDI applications in the SSB aligns with the timing of the date of filing for the most recent accepted application, mbr_ssdi_bdof_app will indicate which application number k.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Date of filing fits with SSDI application 1</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>2</catValu>
         <labl>Date of filing fits with SSDI application 2</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>3</catValu>
         <labl>Date of filing fits with SSDI application 3</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>4</catValu>
         <labl>Date of filing fits with SSDI application 4</labl>
       </catgry>
@@ -2635,19 +2647,19 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>This variable provides the application number (k = 1 to 4) that matches with the date of filing for benefits. This variable pertains to mbr_ssdi_deny_dof. The MBR has information on dates of filing for most recent accepted OASDI application and most recent rejected OASDI application. If one of the four SSDI applications included in the SSB aligns with the individual's SSDI history and the timing of an SSDI application, mbr_ssdi_ddof_app will indicate which application.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Date of filing fits with application 1</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>2</catValu>
         <labl>Date of filing fits with application 2</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>3</catValu>
         <labl>Date of filing fits with application 3</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>4</catValu>
         <labl>Date of filing fits with application 4</labl>
       </catgry>
@@ -2658,11 +2670,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>A flag indicating if the respondent entered the SIPP after wave 1.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not enter SIPP late</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Entered SIPP late</labl>
       </catgry>
@@ -2673,11 +2685,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>Indicator for individual in the SIPP who leave the survey. Variable is based on a positive value for U-REALFT (1984 Panel); REALFT (1990, 1991, 1992, 1993); ULFTMAIN (1996, 2001, 2004, 2008).</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Did not leave SIPP early</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>Left SIPP early</labl>
       </catgry>
@@ -2688,11 +2700,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>Indicator for being in-scope for the main life insurance topical module. This occurs in Wave 3 for the 1996, 2001, and 2004 SIPP panels and Wave 4 for the 1984, 1990, 1991, 1992, 1993, and 2008 panels.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Out of scope</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>In-Scope</labl>
       </catgry>
@@ -2703,11 +2715,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>This variable indicates that an individual was in scope for the pension questions because he or she at least 15 years old at the time of the pension topical module. The pension topical module is conducted in the following waves by panel: wave 4 in the 1984 panel (TM8324); wave 4 in the 1990 and 1992 panels (TM8324); wave 7 in the 1991 panel (TM8324); wave 9 in the 1993 panel (TM8324); wave 7 in the 1996, 2001, and 2004 panels (EARPUNV, RMNJBBS); wave 3 in the 2008 panel (EARPUNV, RMNJBBS).</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Out of scope</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>In-Scope</labl>
       </catgry>
@@ -2718,11 +2730,11 @@ Prior to 1978, a quarter of coverage was granted for every quarter of the calend
       <txt>
         <p>Indicator for being in-scope for the fertility topical module of the SIPP. The fertility topical module occurs in wave 8 of the 1984 panel; wave 2 of the 1990, 1991, 1992, 1993, 1996, 2001, 2004, and 2008 panels.</p>
       </txt>
-      <catgry>
+      <catgry access="released">
         <catValu>0</catValu>
         <labl>Not In-Scope</labl>
       </catgry>
-      <catgry>
+      <catgry access="released">
         <catValu>1</catValu>
         <labl>In-Scope</labl>
       </catgry>
